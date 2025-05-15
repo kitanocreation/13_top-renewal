@@ -1,0 +1,41 @@
+$red: #B11232;
+$grey: #F1F1F4;
+$border-color: #D8D8DB;
+
+$font1: "yu-gothic-pr6n", sans-serif;
+$font2: "roboto", sans-serif;
+
+* {
+
+    .topre {
+        font-family: $font1;
+        font-weight: 400;
+        color: #414143;
+        letter-spacing: .04em;
+        line-height: 150%;
+    }
+}
+
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header, footer, main, section, a, img {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin font-s {
+    font-size: 12px;
+}

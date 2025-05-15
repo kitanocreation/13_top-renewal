@@ -1,3 +1,25 @@
-<header>
+<header class="topre">
     <p>税込<span>6,480</span>円以上で<span>送料無料</span>！&#8251;一部地域を除く</p>
+    <div class="con_topre">
+        <h1><a href="<{$url.top}>"><img src="<{$shop.logo_url}>" alt="北野エースWEB SHOPのロゴマーク"></a></h1>
+        <nav>
+            <ul>
+                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/account-icon.svg" alt=""><span>マイページ</span></a></li>
+                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/favorite-icon.svg" alt=""><span>お気に入り</span></a></li>
+                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/cart-icon.svg" alt=""><span>カート</span></a></li>
+                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/dmenu-icon.svg" alt=""><span>メニュー</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <nav class="search-nav_topre">
+        <div class="category_topre">
+            <select data-id="<{$search_form.category_id}>">
+                <{section name=i loop=$search_form.category_list}>
+                    <option value="<{$search_form.category_list[i].code}>" <{if $search.category.code == $search_form.category_list[i].code}>selected<{/if}>><{$search_form.category_list[i].name}></option>
+                <{/section}>
+            </select>
+            <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/down-icon.svg" alt="">
+        </div>
+        <div class="keyword_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt=""><input type="text" data-id="<{$search_form.keyword_id}>" value="<{$search.keyword}>" placeholder="キーワードを入力" class="searchKeywordInput"></div>
+    </nav>
 </header>

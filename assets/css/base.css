@@ -1,0 +1,21 @@
+* .topre {
+  font-family: "yu-gothic-pr6n", sans-serif;
+  font-weight: 400;
+  color: #414143;
+  letter-spacing: 0.04em;
+  line-height: 150%;
+}
+
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+header, footer, main, section, a, img {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}

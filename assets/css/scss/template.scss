@@ -1,0 +1,134 @@
+@import './base';
+
+header {
+
+    p {
+        padding: 7px 0;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 100%;
+        text-align: center;
+
+        span:nth-of-type(1) {
+            font-family: $font2;
+            font-weight: 500;
+            letter-spacing: .04em;
+            line-height: 100%;
+        }
+
+        span:nth-of-type(2) {
+            font-weight: 500;
+            color: $red;
+            line-height: 100%;
+        }
+    }
+
+    .con_topre {
+        height: 56px;
+        border-top: solid 1px $border-color;
+        border-bottom: solid 1px $border-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            width: 119px;
+            height: 32px;
+            margin-left: 16px;
+
+            a {
+                display: block;
+                height: 100%;
+            }
+        }
+
+        nav {
+            margin-right: 16px;
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    margin-left: 8px;
+
+                    a {
+                        display: block;
+                        height: 100%;
+                        font-size: 8px;
+                        letter-spacing: -.05em;
+                        line-height: 100%;
+
+                        img {
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                            margin: 0 auto;
+                        }
+
+                        span {
+                            display: block;
+                            line-height: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                li:nth-of-type(1) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .search-nav_topre {
+        padding: 0 16px;
+        display: flex;
+        justify-content: space-between;
+
+        .category_topre {
+            width: 26.7vw;
+            height: 36px;
+            border-radius: 4px;
+            background-color: $grey;
+            margin-top: 8px;
+            @include center;
+
+            select {
+                width: 65px;
+                font-size: 12px;
+                line-height: 100%;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .keyword_topre {
+            width: 62.1vw;
+            height: 36px;
+            border-radius: 4px;
+            background-color: $grey;
+            margin-top: 8px;
+            @include center;
+
+            img {
+                width: 24px;
+                height: 24px;
+                margin-left: 12px;
+            }
+
+            input {
+                display: block;
+                width: calc(100% - 24px);
+                height: 100%;
+                background-color: $grey;
+                padding-left: 10px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
