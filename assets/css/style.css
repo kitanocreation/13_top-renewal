@@ -174,6 +174,7 @@ nav.drawer_topre {
   position: fixed;
   top: 0;
   left: 0;
+  transform: translateX(-100vw);
   z-index: 9998;
 }
 nav.drawer_topre ul.guide_topre {
@@ -211,38 +212,67 @@ nav.drawer_topre ul.category_topre {
   height: calc(100vh - 216px);
   overflow-y: auto;
 }
-nav.drawer_topre ul.category_topre li {
+nav.drawer_topre ul.category_topre li .large_topre {
   height: 72px;
   border-bottom: solid 1px #D8D8DB;
-}
-nav.drawer_topre ul.category_topre li a {
   display: flex;
   align-items: center;
   position: relative;
 }
-nav.drawer_topre ul.category_topre li a img {
+nav.drawer_topre ul.category_topre li .large_topre img {
   width: auto;
   height: 60px;
   margin-left: 16px;
   object-fit: initial;
 }
-nav.drawer_topre ul.category_topre li a span:nth-of-type(1) {
+nav.drawer_topre ul.category_topre li .large_topre span:nth-of-type(1) {
   margin-left: 12px;
   font-family: "yu-mincho-pr6n", sans-serif;
   font-size: 16px;
   line-height: 100%;
 }
-nav.drawer_topre ul.category_topre li a span:nth-of-type(2) {
+nav.drawer_topre ul.category_topre li .large_topre span:nth-of-type(2) {
   font-size: 24px;
   line-height: 100%;
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 22.5px;
   transform: translateY(-50%);
+}
+nav.drawer_topre ul.category_topre li ul.small_topre {
+  display: none;
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li {
+  height: 52px;
+  border-top: solid 1px #D8D8DB;
+  background-color: #F1F1F4;
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li a span {
+  display: block;
+  font-family: "yu-mincho-pr6n", sans-serif;
+  transform: translateX(16px);
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li a img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  transform: translateX(-16px);
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li:nth-last-of-type(1) {
+  border-bottom: solid 1px #D8D8DB;
+}
+nav.drawer_topre ul.category_topre li.open_topre ul.small_topre {
+  display: block;
 }
 
 footer {
   background-color: #F1F1F4;
+  margin-top: 40px;
   padding-bottom: 40px;
 }
 footer nav.f-nav_topre ul {
@@ -346,4 +376,145 @@ footer small {
   margin: 24px 0 0 16px;
   font-size: 10px;
   color: #B4B4B7;
+}
+
+html body .fv_topre {
+  width: 375px;
+  margin-top: 137px;
+}
+html body .fv_topre img.bg_topre {
+  width: 100%;
+  height: 375px;
+  background-color: #D9D9D9;
+}
+html body .fv_topre nav {
+  padding: 0 16px;
+  margin-top: 24px;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+html body .fv_topre nav ul {
+  width: fit-content;
+  display: flex;
+}
+html body .fv_topre nav ul li {
+  width: 80px;
+  height: 88px;
+}
+html body .fv_topre nav ul li a img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+}
+html body .fv_topre nav ul li a span {
+  margin-top: 8px;
+  display: block;
+  font-family: "yu-mincho-pr6n", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 100%;
+  text-align: center;
+}
+html body main.top_topre {
+  margin-top: 16px;
+}
+html body main.top_topre section.lp_topre h2, html body main.top_topre section.category_topre h2, html body main.top_topre section.ranking_topre h2, html body main.top_topre section.new_topre h2, html body main.top_topre section.recommend_topre h2, html body main.top_topre section.review_topre h2, html body main.top_topre section.check_topre h2 {
+  margin-left: 16px;
+  font-family: "yu-mincho-pr6n", sans-serif;
+  font-size: 28px;
+}
+html body main.top_topre section.lp_topre {
+  background-color: #F1F1F4;
+  padding-bottom: 40px;
+}
+html body main.top_topre section.lp_topre h2 {
+  padding-top: 40px;
+}
+html body main.top_topre section.lp_topre ul {
+  padding: 0 16px;
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+html body main.top_topre section.lp_topre ul li {
+  width: calc((100vw - 48px) / 2);
+  margin-top: 16px;
+}
+html body main.top_topre section.lp_topre ul li a {
+  display: block;
+}
+html body main.top_topre section.lp_topre ul li a img {
+  height: calc((100vw - 48px) / 2);
+  background-color: #D9D9D9;
+}
+html body main.top_topre section.lp_topre ul li a h3 {
+  margin-top: 4px;
+  font-family: "yu-mincho-pr6n", sans-serif;
+}
+html body main.top_topre section.lp_topre ul li:nth-of-type(1), html body main.top_topre section.lp_topre ul li:nth-of-type(2) {
+  margin-top: 0;
+}
+html body main.top_topre section.lp_topre button {
+  display: block;
+  width: calc(100% - 32px);
+  height: 52px;
+  border-radius: 50px;
+  background-color: #414143;
+  margin: 16px auto 0 auto;
+}
+html body main.top_topre section.lp_topre button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "yu-mincho-pr6n", sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+html body main.top_topre section.category_topre {
+  margin-top: 40px;
+}
+html body main.top_topre section.category_topre ul {
+  width: calc(100vw - 32px);
+  margin: 16px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body main.top_topre section.category_topre ul li {
+  width: 50%;
+  height: 80px;
+  margin-top: 4px;
+}
+html body main.top_topre section.category_topre ul li a {
+  display: flex;
+  align-items: center;
+}
+html body main.top_topre section.category_topre ul li a img {
+  width: 60px;
+  height: 60px;
+  margin-left: 8px;
+}
+html body main.top_topre section.category_topre ul li a h3 {
+  margin-left: 4px;
+  font-family: "yu-mincho-pr6n", sans-serif;
+  font-size: 12px;
+}
+html body main.top_topre section.category_topre ul li:nth-of-type(1), html body main.top_topre section.category_topre ul li:nth-of-type(2) {
+  margin-top: 0;
+}
+html body main.top_topre section.ranking_topre {
+  margin-top: 80px;
+}
+html body main.top_topre section.new_topre {
+  margin-top: 48px;
+}
+html body main.top_topre section.recommend_topre {
+  margin-top: 56px;
+}
+html body main.top_topre section.review_topre {
+  margin-top: 56px;
+}
+html body main.top_topre section.check_topre {
+  margin-top: 80px;
 }

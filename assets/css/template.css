@@ -148,6 +148,7 @@ nav.drawer_topre {
   position: fixed;
   top: 0;
   left: 0;
+  transform: translateX(-100vw);
   z-index: 9998;
 }
 nav.drawer_topre ul.guide_topre {
@@ -185,38 +186,67 @@ nav.drawer_topre ul.category_topre {
   height: calc(100vh - 216px);
   overflow-y: auto;
 }
-nav.drawer_topre ul.category_topre li {
+nav.drawer_topre ul.category_topre li .large_topre {
   height: 72px;
   border-bottom: solid 1px #D8D8DB;
-}
-nav.drawer_topre ul.category_topre li a {
   display: flex;
   align-items: center;
   position: relative;
 }
-nav.drawer_topre ul.category_topre li a img {
+nav.drawer_topre ul.category_topre li .large_topre img {
   width: auto;
   height: 60px;
   margin-left: 16px;
   object-fit: initial;
 }
-nav.drawer_topre ul.category_topre li a span:nth-of-type(1) {
+nav.drawer_topre ul.category_topre li .large_topre span:nth-of-type(1) {
   margin-left: 12px;
   font-family: "yu-mincho-pr6n", sans-serif;
   font-size: 16px;
   line-height: 100%;
 }
-nav.drawer_topre ul.category_topre li a span:nth-of-type(2) {
+nav.drawer_topre ul.category_topre li .large_topre span:nth-of-type(2) {
   font-size: 24px;
   line-height: 100%;
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 22.5px;
   transform: translateY(-50%);
+}
+nav.drawer_topre ul.category_topre li ul.small_topre {
+  display: none;
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li {
+  height: 52px;
+  border-top: solid 1px #D8D8DB;
+  background-color: #F1F1F4;
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li a span {
+  display: block;
+  font-family: "yu-mincho-pr6n", sans-serif;
+  transform: translateX(16px);
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li a img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  transform: translateX(-16px);
+}
+nav.drawer_topre ul.category_topre li ul.small_topre li:nth-last-of-type(1) {
+  border-bottom: solid 1px #D8D8DB;
+}
+nav.drawer_topre ul.category_topre li.open_topre ul.small_topre {
+  display: block;
 }
 
 footer {
   background-color: #F1F1F4;
+  margin-top: 40px;
   padding-bottom: 40px;
 }
 footer nav.f-nav_topre ul {

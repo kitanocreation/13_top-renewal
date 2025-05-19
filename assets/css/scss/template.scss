@@ -136,6 +136,7 @@ nav.drawer_topre {
     width: 100%;
     background-color: $white;
     @include fixed;
+    transform: translateX(-100vw);
     z-index: 9998;
 
     ul.guide_topre {
@@ -178,10 +179,10 @@ nav.drawer_topre {
         overflow-y: auto;
 
         li {
-            height: 72px;
-            border-bottom: solid 1px $border-color;
 
-            a {
+            .large_topre {
+                height: 72px;
+                border-bottom: solid 1px $border-color;
                 display: flex;
                 align-items: center;
                 position: relative;
@@ -205,9 +206,49 @@ nav.drawer_topre {
                     line-height: 100%;
                     position: absolute;
                     top: 50%;
-                    right: 16px;
+                    right: 22.5px;
                     transform: translateY(-50%);
                 }
+            }
+
+            ul.small_topre {
+                display: none;
+
+                li {
+                    height: 52px;
+                    border-top: solid 1px $border-color;
+                    background-color: $grey;
+
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        span {
+                            display: block;
+                            font-family: $font3;
+                            transform: translateX(16px);
+                        }
+
+                        img {
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                            transform: translateX(-16px);
+                        }
+                    }
+                }
+
+                li:nth-last-of-type(1) {
+                    border-bottom: solid 1px $border-color;
+                }
+            }
+        }
+
+        li.open_topre {
+
+            ul.small_topre {
+                display: block;
             }
         }
     }
@@ -215,6 +256,7 @@ nav.drawer_topre {
 
 footer {
     background-color: $grey;
+    margin-top: 40px;
     padding-bottom: 40px;
 
     nav.f-nav_topre {

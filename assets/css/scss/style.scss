@@ -1,2 +1,181 @@
 @import './base';
 @import './template';
+
+html {
+
+    body {
+
+        .fv_topre {
+            width: 375px;
+            margin-top: 137px;
+
+            img.bg_topre {
+                width: 100%;
+                height: 375px;
+                background-color: #D9D9D9;
+            }
+
+            nav {
+                padding: 0 16px;
+                margin-top: 24px;
+                white-space: nowrap;
+                overflow-x: scroll;
+
+                ul {
+                    width: fit-content;
+                    display: flex;
+
+                    li {
+                        width: 80px;
+                        height: 88px;
+
+                        a {
+
+                            img {
+                                display: block;
+                                width: 48px;
+                                height: 48px;
+                                margin: 0 auto;
+                            }
+
+                            span {
+                                margin-top: 8px;
+                                display: block;
+                                font-family: $font3;
+                                @include font-s;
+                                letter-spacing: 0;
+                                line-height: 100%;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        main.top_topre {
+            margin-top: 16px;
+
+            section.lp_topre, section.category_topre, section.ranking_topre, section.new_topre, section.recommend_topre, section.review_topre, section.check_topre {
+
+                h2 {
+                    @include h2;
+                }
+            }
+
+            section.lp_topre {
+                background-color: $grey;
+                padding-bottom: 40px;
+
+                h2 {
+                    padding-top: 40px;
+                }
+
+                ul {
+                    padding: 0 16px;
+                    margin-top: 16px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+
+                    li {
+                        width: calc((100vw - (16px * 3)) / 2);
+                        margin-top: 16px;
+                        
+                        a {
+                            display: block;
+
+                            img {
+                                height: calc((100vw - (16px * 3)) / 2);
+                                background-color: #D9D9D9;
+                            }
+
+                            h3 {
+                                margin-top: 4px;
+                                font-family: $font3;
+                            }
+                        }
+                    }
+
+                    li:nth-of-type(1), li:nth-of-type(2) {
+                        margin-top: 0;
+                    }
+                }
+
+                button {
+                    display: block;
+                    width: calc(100% - 32px);
+                    height: 52px;
+                    border-radius: 50px;
+                    background-color: $black;
+                    margin: 16px auto 0 auto;
+
+                    a {
+                        @include center;
+                        font-family: $font3;
+                        font-size: 16px;
+                        color: $white;
+                    }
+                }
+            }
+
+            section.category_topre {
+                margin-top: 40px;
+
+                ul {
+                    width: calc(100vw - 32px);
+                    margin: 16px auto 0 auto;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        width: calc(100% / 2);
+                        height: 80px;
+                        margin-top: 4px;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                width: 60px;
+                                height: 60px;
+                                margin-left: 8px;
+                            }
+
+                            h3 {
+                                margin-left: 4px;
+                                font-family: $font3;
+                                @include font-s;
+                            }
+                        }
+                    }
+
+                    li:nth-of-type(1), li:nth-of-type(2) {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            section.ranking_topre {
+                margin-top: 80px;
+            }
+
+            section.new_topre {
+                margin-top: 48px;
+            }
+
+            section.recommend_topre {
+                margin-top: 56px;
+            }
+
+            section.review_topre {
+                margin-top: 56px;
+            }
+
+            section.check_topre {
+                margin-top: 80px;
+            }
+        }
+    }
+}
