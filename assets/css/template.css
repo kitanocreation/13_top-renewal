@@ -1,4 +1,4 @@
-* .topre {
+html.topre * {
   font-family: "yu-gothic-pr6n", sans-serif;
   font-weight: 400;
   color: #414143;
@@ -38,13 +38,14 @@ header p {
 }
 header p span:nth-of-type(1) {
   font-family: "roboto", sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 100%;
 }
 header p span:nth-of-type(2) {
-  font-weight: 500;
+  font-weight: 700;
   color: #B11232;
+  letter-spacing: 0;
   line-height: 100%;
 }
 header .con_topre {
@@ -94,7 +95,7 @@ header .con_topre nav ul li:nth-of-type(1) {
 }
 header .search-nav_topre {
   border-top: solid 1px #D8D8DB;
-  padding: 0 16px;
+  padding: 0 16px 8px 16px;
   display: flex;
   justify-content: space-between;
 }
@@ -111,6 +112,7 @@ header .search-nav_topre .category_topre {
 header .search-nav_topre .category_topre select {
   width: 65px;
   font-size: 12px;
+  letter-spacing: 0;
   line-height: 100%;
 }
 header .search-nav_topre .category_topre img {

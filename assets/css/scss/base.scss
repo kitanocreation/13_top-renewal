@@ -2,15 +2,17 @@ $white: #FFFFFF;
 $black: #414143;
 $red: #B11232;
 $grey: #F1F1F4;
+$yellow: #FFD327;
+$beige: #EDE1B3;
 $border-color: #D8D8DB;
 
 $font1: "yu-gothic-pr6n", sans-serif;
 $font2: "roboto", sans-serif;
 $font3: "yu-mincho-pr6n", sans-serif;
 
-* {
+html.topre {
 
-    .topre {
+    * {
         font-family: $font1;
         font-weight: 400;
         color: $black;
@@ -43,6 +45,12 @@ img {
     align-items: center;
 }
 
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 @mixin fixed {
     position: fixed;
     top: 0;
@@ -57,4 +65,6 @@ img {
     margin-left: 16px;
     font-family: $font3;
     font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0;
 }

@@ -7,7 +7,7 @@ html {
 
         .fv_topre {
             width: 375px;
-            margin-top: 137px;
+            margin-top: 142.5px;
 
             img.bg_topre {
                 width: 100%;
@@ -43,6 +43,7 @@ html {
                                 display: block;
                                 font-family: $font3;
                                 @include font-s;
+                                font-weight: 700;
                                 letter-spacing: 0;
                                 line-height: 100%;
                                 text-align: center;
@@ -93,6 +94,7 @@ html {
                             h3 {
                                 margin-top: 4px;
                                 font-family: $font3;
+                                font-weight: 700;
                             }
                         }
                     }
@@ -108,13 +110,16 @@ html {
                     height: 52px;
                     border-radius: 50px;
                     background-color: $black;
+                    padding: 0;
                     margin: 16px auto 0 auto;
 
                     a {
                         @include center;
                         font-family: $font3;
                         font-size: 16px;
+                        font-weight: 700;
                         color: $white;
+                        letter-spacing: 0;
                     }
                 }
             }
@@ -147,6 +152,7 @@ html {
                                 margin-left: 4px;
                                 font-family: $font3;
                                 @include font-s;
+                                font-weight: 700;
                             }
                         }
                     }
@@ -159,10 +165,249 @@ html {
 
             section.ranking_topre {
                 margin-top: 80px;
+
+                ul {
+                    width: calc(100vw - 32px);
+                    margin: calc(24px + 40px) auto 0 auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    li {
+                        width: calc((100% - 16px) / 2);
+                        margin-top: calc(24px + 40px);
+                        position: relative;
+
+                        p.ranking-icon_topre {
+                            width: 32px;
+                            height: 26px;
+                            @include center;
+                            font-family: $font2;
+                            color: $white;
+                            letter-spacing: 0;
+                            line-height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translate(-50%, -100%);
+
+                            img {
+                                height: 100%;
+                                position: absolute;
+                                top: -4px;
+                                left: 0;
+                                z-index: -1;
+                            }
+                        }
+
+                        p.status_topre {
+                            background-color: $red;
+                            color: $white;
+                            @include absolute;
+                        }
+
+                        a.image_topre {
+                            display: block;
+                            height: calc(((100vw - 32px) - 16px) / 2);
+
+                            img {
+                                height: 100%;
+                            }
+                        }
+
+                        ul.icon_topre {
+                            width: 200px;
+                            margin-top: 4px;
+
+                            li {
+                                margin: 0 0 0 0;
+                            }
+                        }
+
+                        .review_topre {
+                            display: flex;
+                            align-items: center;
+
+                            .reviewRate {
+
+                                .reviewRateStar {
+                                    
+                                    &::before {
+                                        @include font-s;
+                                        color: $yellow;
+                                    }
+                                }
+                            }
+
+                            a {
+                                width: initial;
+                                @include font-s;
+                                transform: translateY(1.5px);
+                            }
+                        }
+
+                        h3 {
+                            margin-top: 4px;
+                            
+                            a {
+                                font-weight: 700;
+                            }
+                        }
+
+                        p.price_topre {
+                            margin-top: 4px;
+                            @include font-s;
+
+                            span {
+                                font-size: 16px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                    li:nth-of-type(1), li:nth-of-type(2) {
+                        margin-top: 0;
+                    }
+
+                    li:nth-of-type(5), li:nth-of-type(6), li:nth-of-type(7), li:nth-of-type(8), li:nth-of-type(9), li:nth-of-type(10) {
+                        width: calc((100% - 24px) / 3);
+
+                        a.image_topre {
+                            height: calc(((100vw - 16px) - 24px) / 3);
+                        }
+
+                        ul.icon_topre {
+                            width: 150px;
+                        }
+
+                        .review_topre {
+                            display: flex;
+                            align-items: center;
+
+                            .reviewRate {
+
+                                .reviewRateStar {
+                                    
+                                    &::before {
+                                        font-size: 10px;
+                                        color: $yellow;
+                                    }
+                                }
+                            }
+
+                            a {
+                                width: initial;
+                                font-size: 10px;
+                                transform: translateY(1.5px);
+                            }
+                        }
+                    }
+                }
             }
 
-            section.new_topre {
+            section.new_topre, section.recommend_topre, section.check_topre {
                 margin-top: 48px;
+
+                ul {
+                    width: calc(100vw - 32px);
+                    margin: 24px auto 0 auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    li {
+                        width: calc((100% - 24px) / 2);
+                        margin-top: 24px;
+                        position: relative;   
+
+                        a.image_topre {
+                            display: block;
+                            height: calc(((100vw - 32px) - 24px) / 2);
+
+                            img {
+                                height: 100%;
+                            }
+                        }
+
+                        ul.icon_topre {
+                            width: 200px;
+                            margin-top: 4px;
+
+                            li {
+                                margin: 0 0 0 0;
+                            }
+                        }
+
+                        .review_topre {
+                            display: flex;
+                            align-items: center;
+
+                            .reviewRate {
+
+                                .reviewRateStar {
+                                    
+                                    &::before {
+                                        @include font-s;
+                                        color: $yellow;
+                                    }
+                                }
+                            }
+
+                            a {
+                                width: initial;
+                                @include font-s;
+                                transform: translateY(1.5px);
+                            }
+                        }
+
+                        h3 {
+                            margin-top: 4px;
+                            
+                            a {
+                                font-weight: 700;
+                            }
+                        }
+
+                        p.price_topre {
+                            margin-top: 4px;
+                            @include font-s;
+
+                            span {
+                                font-size: 16px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                    li:nth-of-type(1), li:nth-of-type(2) {
+                        margin-top: 0;
+                    }
+                }
+
+                button {
+                    display: block;
+                    width: 38.9vw;
+                    height: 40px;
+                    border: solid 1px $black;
+                    border-radius: 50px;      
+                    background-color: transparent;  
+                    padding: 0;           
+                    margin: 24px auto 0 auto;
+
+                    a {
+                        @include center;
+                        font-family: $font3;
+                        font-size: 14px;
+                        font-weight: 700;
+                        letter-spacing: 0;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
             }
 
             section.recommend_topre {
@@ -175,6 +420,154 @@ html {
 
             section.check_topre {
                 margin-top: 80px;
+
+                ul {
+                    width: calc(100vw - 32px);
+
+                    li {
+                        width: calc((100% - 16px) / 3);
+
+                        a.image_topre {
+                            height: calc(((100vw - 16px) - 16px) / 3);
+                        }
+
+                        ul.icon_topre {
+                            width: 150px;
+                        }
+
+                        .review_topre {
+
+                            .reviewRate {
+
+                                .reviewRateStar {
+                                    
+                                    &::before {
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+
+                            a {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+
+                    li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3) {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            section.search_topre {
+                border-top: solid 1px $border-color;
+                padding: 40px 0 48px 0;
+                margin-top: 40px;
+
+                nav.search-nav_topre {
+                    width: calc(100% - 32px);
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .category_topre {
+                        width: 26.7vw;
+                        height: 36px;
+                        border-radius: 4px;
+                        background-color: $grey;
+                        margin-top: 8px;
+                        @include center;
+
+                        select {
+                            width: 65px;
+                            @include font-s;
+                            line-height: 100%;
+                        }
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+
+                    .keyword_topre {
+                        width: 62.1vw;
+                        height: 36px;
+                        border-radius: 4px;
+                        background-color: $grey;
+                        margin-top: 8px;
+                        @include center;
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            margin-left: 12px;
+                        }
+
+                        input {
+                            display: block;
+                            width: calc(100% - 24px);
+                            height: 100%;
+                            background-color: $grey;
+                            padding-left: 10px;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+
+                h3 {
+                    margin-top: 24px;
+                    @include font-s;
+                    font-weight: 700;
+                    text-align: center;
+                }
+
+                nav.tag-nav_topre {
+                    margin-top: 8px;
+
+                    ul {
+                        display: flex;
+                        justify-content: center;
+
+                        li {
+                            margin-left: 8px;
+
+                            a {
+                                border-radius: 20px;
+                                background-color: $beige;
+                                padding: 4px 8px;
+                                @include font-s;
+                            }
+                        }
+
+                        li:nth-of-type(1) {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            section.banner_topre {
+                border-top: solid 1px $border-color;
+                padding-top: 40px;
+
+                ul {
+                    width: calc(100vw - 32px);
+                    margin: 0 auto;
+
+                    li {
+                        margin-top: 16px;
+
+                        a {
+                            display: block;
+                        }
+                    }
+
+                    li:nth-of-type(1) {
+                        margin-top: 0;
+                    }
+                }
             }
         }
     }
