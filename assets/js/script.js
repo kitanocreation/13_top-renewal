@@ -2,7 +2,12 @@ $(function() {
 
     // console.log('テスト');
 
-    /* slick-mv */
+    /* drawer_topre */
+    $('li.drawerbutton_topre').on('click', function() {
+        $('nav.drawer_topre').toggleClass('open_topre');
+    });
+
+    /* mv_topre */
     $('.mv_topre').slick({
         dots: true,
         autoplay: true,

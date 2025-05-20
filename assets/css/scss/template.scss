@@ -54,9 +54,6 @@ header {
 
                     a {
                         display: block;
-                        font-size: 8px;
-                        letter-spacing: -.05em;
-                        line-height: 100%;
 
                         img {
                             display: block;
@@ -67,6 +64,8 @@ header {
 
                         span {
                             display: block;
+                            font-size: 8px;
+                            letter-spacing: -.05em;
                             line-height: 100%;
                             text-align: center;
                         }
@@ -75,6 +74,24 @@ header {
 
                 li:nth-of-type(1) {
                     margin-left: 0;
+                }
+
+                li.drawerbutton_topre {
+
+                    img {
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        margin: 0 auto;
+                    }
+
+                    span {
+                        display: block;
+                        font-size: 8px;
+                        letter-spacing: -.05em;
+                        line-height: 100%;
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -140,6 +157,7 @@ nav.drawer_topre {
     @include fixed;
     transform: translateX(-100vw);
     z-index: 9998;
+    transition-duration: .5s;
 
     ul.guide_topre {
         height: 80px;
@@ -254,6 +272,10 @@ nav.drawer_topre {
             }
         }
     }
+}
+
+nav.open_topre {
+    transform: translateX(0);
 }
 
 footer {

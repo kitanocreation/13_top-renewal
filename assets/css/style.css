@@ -101,9 +101,6 @@ header .con_topre nav ul li {
 }
 header .con_topre nav ul li a {
   display: block;
-  font-size: 8px;
-  letter-spacing: -0.05em;
-  line-height: 100%;
 }
 header .con_topre nav ul li a img {
   display: block;
@@ -113,11 +110,26 @@ header .con_topre nav ul li a img {
 }
 header .con_topre nav ul li a span {
   display: block;
+  font-size: 8px;
+  letter-spacing: -0.05em;
   line-height: 100%;
   text-align: center;
 }
 header .con_topre nav ul li:nth-of-type(1) {
   margin-left: 0;
+}
+header .con_topre nav ul li.drawerbutton_topre img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+}
+header .con_topre nav ul li.drawerbutton_topre span {
+  display: block;
+  font-size: 8px;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+  text-align: center;
 }
 header .search-nav_topre {
   border-top: solid 1px #D8D8DB;
@@ -178,6 +190,7 @@ nav.drawer_topre {
   left: 0;
   transform: translateX(-100vw);
   z-index: 9998;
+  transition-duration: 0.5s;
 }
 nav.drawer_topre ul.guide_topre {
   height: 80px;
@@ -270,6 +283,10 @@ nav.drawer_topre ul.category_topre li ul.small_topre li:nth-last-of-type(1) {
 }
 nav.drawer_topre ul.category_topre li.open_topre ul.small_topre {
   display: block;
+}
+
+nav.open_topre {
+  transform: translateX(0);
 }
 
 footer {
@@ -745,8 +762,6 @@ html body main.top_topre section.new_topre button, html body main.top_topre sect
   background-color: transparent;
   padding: 0;
   margin: 24px auto 0 auto;
-}
-html body main.top_topre section.new_topre button a, html body main.top_topre section.recommend_topre button a, html body main.top_topre section.check_topre button a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -755,7 +770,7 @@ html body main.top_topre section.new_topre button a, html body main.top_topre se
   font-weight: 700;
   letter-spacing: 0;
 }
-html body main.top_topre section.new_topre button a img, html body main.top_topre section.recommend_topre button a img, html body main.top_topre section.check_topre button a img {
+html body main.top_topre section.new_topre button img, html body main.top_topre section.recommend_topre button img, html body main.top_topre section.check_topre button img {
   width: 20px;
   height: 20px;
   margin-right: 8px;
@@ -822,9 +837,7 @@ html body main.top_topre section.review_topre button {
   border-radius: 50px;
   background-color: transparent;
   padding: 0;
-  margin: 16px auto 0 auto;
-}
-html body main.top_topre section.review_topre button a {
+  margin: 24px auto 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -833,7 +846,7 @@ html body main.top_topre section.review_topre button a {
   font-weight: 700;
   letter-spacing: 0;
 }
-html body main.top_topre section.review_topre button a img {
+html body main.top_topre section.review_topre button img {
   width: 20px;
   height: 20px;
   margin-right: 8px;

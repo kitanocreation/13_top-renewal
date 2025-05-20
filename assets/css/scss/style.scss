@@ -458,19 +458,16 @@ html {
                     background-color: transparent;  
                     padding: 0;           
                     margin: 24px auto 0 auto;
+                    @include center;
+                    font-family: $font3;
+                    font-size: 14px;
+                    font-weight: 700;
+                    letter-spacing: 0;
 
-                    a {
-                        @include center;
-                        font-family: $font3;
-                        font-size: 14px;
-                        font-weight: 700;
-                        letter-spacing: 0;
-
-                        img {
-                            width: 20px;
-                            height: 20px;
-                            margin-right: 8px;
-                        }
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 8px;
                     }
                 }
             }
@@ -557,20 +554,17 @@ html {
                     border-radius: 50px;      
                     background-color: transparent;  
                     padding: 0;           
-                    margin: 16px auto 0 auto;
+                    margin: 24px auto 0 auto;
+                    @include center;
+                    font-family: $font3;
+                    font-size: 14px;
+                    font-weight: 700;
+                    letter-spacing: 0;
 
-                    a {
-                        @include center;
-                        font-family: $font3;
-                        font-size: 14px;
-                        font-weight: 700;
-                        letter-spacing: 0;
-
-                        img {
-                            width: 20px;
-                            height: 20px;
-                            margin-right: 8px;
-                        }
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 8px;
                     }
                 }
             }
