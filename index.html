@@ -5,7 +5,7 @@
     <{$module.header_topre}>
     <{$module.drawer_topre}>
     <div class="fv_topre">
-        <img src="" alt="" class="bg_topre">
+        <{$module.mv_topre}>
         <{$module.icon_topre}>
     </div>
     <main class="top_topre">
@@ -203,6 +203,24 @@
         </section>
         <section class="review_topre">
             <h2>新着レビュー</h2>
+            <ul>
+                <{section name=i loop=$review_item.list max=3}>
+                    <li>
+                        <a href="<{$review_item.list[i].url}>">
+                            <p><span><{$review_item.list[i].reviewer_name}></span>さん　<{$review_item.list[i].date.year}>/<{$review_item.list[i].date.month}>/<{$review_item.list[i].date.day}></p>
+                            <div class="container_topre">
+                                <img src="<{$review_item.list[i].image_S}>" alt="<{$review_item.list[i].name}>">
+                                <div class="con_topre">
+                                    <{$review_item.list[i].star_html}>
+                                    <h3><{$review_item.list[i].name}></h3>
+                                    <p><{$review_item.list[i].content}></p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                <{/section}>
+            </ul>
+            <button><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/plus-icon.svg" alt="">もっと見る</a></button>
         </section>
         <section class="check_topre">
             <h2>最近チェックした商品</h2>
