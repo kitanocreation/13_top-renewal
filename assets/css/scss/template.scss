@@ -25,7 +25,7 @@ header.top_topre, header.down_topre {
         }
     }
 
-    .con_topre {
+    .container_topre {
         height: 56px;
         border-top: solid 1px $border-color;
         display: flex;
@@ -42,18 +42,43 @@ header.top_topre, header.down_topre {
             }
         }
 
-        nav {
-            margin-right: 16px;
+        .con_topre {
 
-            ul {
-                display: flex;
-                align-items: center;
+            nav.mnav_topre {
+                margin-right: 16px;
 
-                li {
-                    margin-left: 8px;
+                ul {
+                    display: flex;
+                    align-items: center;
 
-                    a {
-                        display: block;
+                    li {
+                        margin-left: 8px;
+
+                        a {
+                            display: block;
+
+                            img {
+                                display: block;
+                                width: 24px;
+                                height: 24px;
+                                margin: 0 auto;
+                            }
+
+                            span {
+                                display: block;
+                                font-size: 8px;
+                                letter-spacing: -.05em;
+                                line-height: 100%;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    li:nth-of-type(1) {
+                        margin-left: 0;
+                    }
+
+                    li.drawerbutton_topre {
 
                         img {
                             display: block;
@@ -69,28 +94,6 @@ header.top_topre, header.down_topre {
                             line-height: 100%;
                             text-align: center;
                         }
-                    }
-                }
-
-                li:nth-of-type(1) {
-                    margin-left: 0;
-                }
-
-                li.drawerbutton_topre {
-
-                    img {
-                        display: block;
-                        width: 24px;
-                        height: 24px;
-                        margin: 0 auto;
-                    }
-
-                    span {
-                        display: block;
-                        font-size: 8px;
-                        letter-spacing: -.05em;
-                        line-height: 100%;
-                        text-align: center;
                     }
                 }
             }

@@ -43,6 +43,21 @@ button {
     display: block;
 }
 
+.pc_topre {
+    display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .sp_topre {
+        display: none !important;
+    }
+
+    .pc_topre {
+        display: block !important;
+    }
+}
+
 @mixin center {
     display: flex;
     justify-content: center;
@@ -63,6 +78,10 @@ button {
 
 @mixin font-s {
     font-size: 12px;
+}
+
+@mixin font-m {
+    font-size: 14px;
 }
 
 @mixin h2 {

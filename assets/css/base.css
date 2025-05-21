@@ -27,3 +27,16 @@ img {
 button {
   display: block;
 }
+
+.pc_topre {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .sp_topre {
+    display: none !important;
+  }
+  .pc_topre {
+    display: block !important;
+  }
+}

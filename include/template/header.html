@@ -1,17 +1,64 @@
 <header class="top_topre">
     <p>税込<span>6,480</span>円以上で<span>送料無料</span>！&#8251;一部地域を除く</p>
-    <div class="con_topre">
+    <div class="container_topre">
         <h1><a href="<{$url.top}>"><img src="<{$shop.logo_url}>" alt="北野エースWEB SHOPのロゴマーク"></a></h1>
-        <nav>
-            <ul>
-                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/account-icon.svg" alt=""><span>マイページ</span></a></li>
-                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/favorite-icon.svg" alt=""><span>お気に入り</span></a></li>
-                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/cart-icon.svg" alt=""><span>カート</span></a></li>
-                <li class="drawerbutton_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/dmenu-icon.svg" alt=""><span>メニュー</span></li>
-            </ul>
-        </nav>
+        <div class="con_topre">
+            <nav class="gnav_topre pc_topre">
+                <ul>
+                    <li class="select_topre">
+                        カテゴリから探す
+                        <nav class="medium_topre">
+                            <ul>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/retortcurry.webp" alt=""><span>レトルトカレー</span></a></li>
+                                <nav class="guide-nav_topre">
+                                    <ul>
+                                        <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/guide-icon.svg" alt=""><span>ご利用ガイド</span></a></li>
+                                        <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/mail-icon.svg" alt=""><span>お問い合わせ</span></a></li>
+                                        <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/header/order-icon.svg" alt=""><span>大口注文</span></a></li>
+                                    </ul>
+                                </nav>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li>特集</li>
+                    <li>サポート</li>
+                </ul>
+            </nav>
+            <nav class="search-nav_topre pc_topre">
+                <div class="category_topre">
+                    <select data-id="<{$search_form.category_id}>">
+                        <{section name=i loop=$search_form.category_list}>
+                            <option value="<{$search_form.category_list[i].code}>" <{if $search.category.code == $search_form.category_list[i].code}>selected<{/if}>><{$search_form.category_list[i].name}></option>
+                        <{/section}>
+                    </select>
+                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/down-icon.svg" alt="">
+                </div>
+                <div class="keyword_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt=""><input type="text" data-id="<{$search_form.keyword_id}>" value="<{$search.keyword}>" placeholder="キーワードを入力" class="searchKeywordInput"></div>
+            </nav>
+            <nav class="mnav_topre">
+                <ul>
+                    <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/account-icon.svg" alt=""><span>マイページ</span></a></li>
+                    <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/favorite-icon.svg" alt=""><span>お気に入り</span></a></li>
+                    <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/cart-icon.svg" alt=""><span>カート</span></a></li>
+                    <li class="drawerbutton_topre sp_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/dmenu-icon.svg" alt=""><span>メニュー</span></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <nav class="search-nav_topre">
+    <nav class="search-nav_topre sp_topre">
         <div class="category_topre">
             <select data-id="<{$search_form.category_id}>">
                 <{section name=i loop=$search_form.category_list}>
@@ -24,16 +71,18 @@
     </nav>
 </header>
 <header class="down_topre close_topre">
-    <div class="con_topre">
+    <div class="container_topre">
         <h1><a href="<{$url.top}>"><img src="<{$shop.logo_url}>" alt="北野エースWEB SHOPのロゴマーク"></a></h1>
-        <nav>
-            <ul>
-                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/account-icon.svg" alt=""><span>マイページ</span></a></li>
-                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/favorite-icon.svg" alt=""><span>お気に入り</span></a></li>
-                <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/cart-icon.svg" alt=""><span>カート</span></a></li>
-                <li class="drawerbutton_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/dmenu-icon.svg" alt=""><span>メニュー</span></li>
-            </ul>
-        </nav>
+        <div class="con_topre">
+            <nav class="mnav_topre">
+                <ul>
+                    <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/account-icon.svg" alt=""><span>マイページ</span></a></li>
+                    <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/favorite-icon.svg" alt=""><span>お気に入り</span></a></li>
+                    <li><a href=""><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/cart-icon.svg" alt=""><span>カート</span></a></li>
+                    <li class="drawerbutton_topre sp_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/dmenu-icon.svg" alt=""><span>メニュー</span></li>
+                </ul>
+            </nav>
+        </div>
     </div>
     <nav class="search-nav_topre">
         <div class="category_topre">
