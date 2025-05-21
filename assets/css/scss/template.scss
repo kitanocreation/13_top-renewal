@@ -1,7 +1,7 @@
 @import './base';
 
-header {
-    @include fixed;
+header.top_topre, header.down_topre {
+    position: relative;
 
     p {
         padding: 7px 0;
@@ -151,6 +151,14 @@ header {
     }
 }
 
+header.down_topre {
+    @include fixed;
+}
+
+header.close_topre {
+    transform: translateY(-100%);
+}
+
 nav.drawer_topre {
     width: 100%;
     background-color: $white;
@@ -164,7 +172,7 @@ nav.drawer_topre {
         border-top: solid 1px $border-color;
         border-bottom: solid 1px $border-color;
         background-color: $grey;
-        margin-top: 136px;
+        margin-top: 110px;
         display: flex;
 
         li {
@@ -195,7 +203,7 @@ nav.drawer_topre {
     }
 
     ul.category_topre {
-        height: calc(100vh - 216px);
+        height: calc(100vh - 190px);
         overflow-y: auto;
 
         li {

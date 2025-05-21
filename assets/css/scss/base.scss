@@ -39,6 +39,10 @@ img {
     object-fit: cover;
 }
 
+button {
+    display: block;
+}
+
 @mixin center {
     display: flex;
     justify-content: center;

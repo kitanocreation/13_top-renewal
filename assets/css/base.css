@@ -23,3 +23,7 @@ img {
   max-width: 100%;
   object-fit: cover;
 }
+
+button {
+  display: block;
+}
