@@ -289,10 +289,10 @@ nav.open_topre {
     transform: translateX(0);
 }
 
-footer {
+footer.top_topre {
     background-color: $grey;
-    margin-top: 40px;
     padding-bottom: 40px;
+    margin-top: 40px;
 
     nav.f-nav_topre {
 
@@ -330,7 +330,7 @@ footer {
         }
     }
 
-    .con_topre {
+    .con_topre:nth-of-type(1) {
         width: calc(100% - 32px);
         background-color: $white;
         padding-bottom: 8px;

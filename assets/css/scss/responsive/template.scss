@@ -18,6 +18,7 @@
 
         .container_topre {
             height: 64px;
+            border-bottom: solid 1px $border-color;
 
             h1 {
                 width: 134px;
@@ -49,7 +50,6 @@
                         nav.medium_topre {
                             display: none;
                             width: 100vw;
-                            border-top: solid 1px $border-color;
                             background-color: $white;
                             padding-bottom: 40px;
                             position: absolute;
@@ -217,6 +217,10 @@
                         }
                     }
 
+                    li.category_topre {
+                        margin-left: 0;
+                    }
+
                     li.lp_topre {
 
                         nav.medium_topre {
@@ -272,8 +276,44 @@
                         }
                     }
 
-                    li:nth-of-type(1) {
-                        margin-left: 0;
+                    li.guide_topre {
+                        padding-bottom: 0;
+                        position: relative;
+                        
+                        nav.medium_topre {
+                            width: 143px;
+                            background-color: $grey;
+                            padding-bottom: 0;
+                            transform: translateY(8px);
+
+                            ul {
+                                width: 100%;
+                                margin: 0 0 0 0;
+
+                                li {
+                                    width: 100%;
+                                    height: 60px;
+                                    display: block;
+
+                                    a {
+                                        display: flex;
+                                        align-items: center;
+
+                                        img {
+                                            width: 24px;
+                                            height: 24px;
+                                            margin-left: 12px;
+                                        }
+
+                                        span {
+                                            display: block;
+                                            margin-top: 0;
+                                            margin-left: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     li.gnav-select_topre {
@@ -359,6 +399,80 @@
                 ul {
                     height: 100%;
                 }
+            }
+        }
+    }
+
+    footer.top_topre {
+        padding-bottom: 64px;
+        margin-top: 64px;
+
+        nav.f-nav_topre {
+
+            ul {
+
+                li {
+
+                    a {
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+
+        .container_topre {
+            width: calc(100% - 160px);
+            margin: 64px auto 0 auto;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: end;
+
+            .con_topre:nth-of-type(1) {
+                width: 372px;
+                height: fit-content;
+                margin: 0 0 0 0;
+
+                p {
+                    font-size: 16px;
+                }
+
+                div {
+
+                    span {
+                        font-size: 28px;
+                    }
+                }
+
+                p:nth-of-type(2) {
+                    font-size: 14px;
+                }
+            }
+
+            .sns-nav_topre {
+                margin: 0 0 0 0;
+            }
+
+            .info-nav_topre {
+                margin: 24px 0 0 0;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        margin-top: 0;
+                        margin-left: 24px;
+                    }
+
+                    li:nth-of-type(1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            small {
+                margin: 24px 0 0 0;
             }
         }
     }
