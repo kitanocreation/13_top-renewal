@@ -47,12 +47,36 @@
                         text-align: center;
 
                         nav.medium_topre {
+                            display: none;
                             width: 100vw;
+                            border-top: solid 1px $border-color;
                             background-color: $white;
                             padding-bottom: 40px;
                             position: absolute;
                             top: 100%;
                             left: 0;
+
+                            button {
+                                border: none;
+                                background-color: transparent;
+                                position: absolute;
+                                top: 40px;
+                                right: 80px;
+                                z-index: 1;
+
+                                img {
+                                    display: block;
+                                    width: 24px;
+                                    height: 24px;
+                                }
+
+                                span {
+                                    display: block;
+                                    font-size: 8px;
+                                    letter-spacing: -.05em;
+                                    line-height: 100%;
+                                }
+                            }
 
                             ul {
                                 width: calc(100% - 160px);
@@ -65,20 +89,90 @@
                                     width: calc(((100vw - 160px) - 24px) / 7);
                                     height: calc(((100vw - 160px) - 24px) / 7);
                                     margin-left: 0;
+                                    @include center;
+                                    flex-direction: column;
 
-                                    a {
-                                        @include center;
-                                        flex-direction: column;
+                                    img {
+                                        width: 100px;
+                                        height: 100px;
+                                    }
 
-                                        img {
-                                            width: 100px;
-                                            height: 100px;
+                                    span {
+                                        display: block;
+                                        font-family: $font3;
+                                        margin-top: 8px;
+                                    }
+
+                                    nav.small_topre {
+                                        display: none;
+                                        width: 100vw;
+                                        border-top: solid 1px $border-color;
+                                        background-color: $white;
+                                        @include absolute;
+
+                                        nav.breadcrumb_topre {
+                                            display: flex;
+                                            align-items: center;
+                                            position: absolute;
+                                            top: 40px;
+                                            left: 80px;
+                                            z-index: 1;
+
+                                            img {
+                                                display: block;
+                                                width: 24px;
+                                                height: 24px;
+                                            }                                        
+
+                                            span {
+                                                display: block;
+                                                margin-top: 0;
+                                                margin-left: 16px;
+                                                font-size: 16px;
+                                                line-height: 100%;
+                                            }
                                         }
 
-                                        span {
-                                            display: block;
-                                            font-family: $font3;
-                                            margin-top: 8px;
+                                        ul {
+                                            width: calc(100% - 160px);
+                                            margin: 94px auto 0 auto;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            justify-content: initial;
+
+                                            li {
+                                                width: calc(((100vw - 160px) - 24px) / 7);
+                                                height: calc(((100vw - 160px) - 24px) / 7);
+                                                margin-left: 4px;
+
+                                                a {
+                                                    @include center;
+                                                    flex-direction: column;
+
+                                                    img {
+                                                        width: 100px;
+                                                        height: 100px;
+                                                    }
+
+                                                    span {
+                                                        display: block;
+                                                        font-family: $font3;
+                                                        margin-top: 8px;
+                                                    }
+                                                }
+                                            }
+
+                                            li:nth-of-type(1), li:nth-of-type(7) {
+                                                margin-left: 0;
+                                            }
+
+                                            li:nth-of-type(1) {
+                                                background-color: $grey;
+
+                                                a {
+                                                    font-family: $font3;
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -123,12 +217,81 @@
                         }
                     }
 
+                    li.lp_topre {
+
+                        nav.medium_topre {
+
+                            ul {
+                                padding-top: 60px;
+                                margin: 0 auto;
+
+                                li {
+                                    width: calc(((100vw - 160px) - (16px * 5)) / 6);
+
+                                    a {
+                                        display: block;
+                                        height: fit-content;
+
+                                        img {
+                                            width: calc(((100vw - 160px) - (16px * 5)) / 6);
+                                            height: calc(((100vw - 160px) - (16px * 5)) / 6);
+                                        }
+
+                                        span {
+                                            display: block;
+                                            margin-top: 4px;
+                                            font-size: 16px;
+                                            text-align: initial;
+                                        }
+                                    }
+                                }
+                            }
+
+                            button {
+                                display: block;
+                                width: 400px;
+                                height: 56px;
+                                border: none;
+                                border-radius: 50px;
+                                background-color: $black;
+                                padding: 0;
+                                margin: calc(24px + 20px) auto 0 auto;
+                                position: relative;
+                                top: inherit;
+                                right: initial;
+
+                                a {
+                                    @include center;
+                                    font-family: $font3;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    color: $white;
+                                    letter-spacing: 0;
+                                }
+                            }
+                        }
+                    }
+
                     li:nth-of-type(1) {
                         margin-left: 0;
                     }
 
-                    li.select_topre {
+                    li.gnav-select_topre {
                         border-bottom: solid 2px $red;
+
+                        nav.medium-select_topre {
+                            display: block;
+
+                            ul {
+
+                                li {
+
+                                    nav.small-select_topre {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

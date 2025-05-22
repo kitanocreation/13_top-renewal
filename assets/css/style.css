@@ -518,12 +518,33 @@ button {
     text-align: center;
   }
   header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre {
+    display: none;
     width: 100vw;
+    border-top: solid 1px #D8D8DB;
     background-color: #FFFFFF;
     padding-bottom: 40px;
     position: absolute;
     top: 100%;
     left: 0;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre button, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    z-index: 1;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre button img, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre button img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre button span, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre button span {
+    display: block;
+    font-size: 8px;
+    letter-spacing: -0.05em;
+    line-height: 100%;
   }
   header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul {
     width: calc(100% - 160px);
@@ -536,21 +557,84 @@ button {
     width: calc((100vw - 160px - 24px) / 7);
     height: calc((100vw - 160px - 24px) / 7);
     margin-left: 0;
-  }
-  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li a, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li a img, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li a img {
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li img, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li img {
     width: 100px;
     height: 100px;
   }
-  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li a span, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li a span {
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li span, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li span {
     display: block;
     font-family: "yu-mincho-pr6n", sans-serif;
     margin-top: 8px;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre {
+    display: none;
+    width: 100vw;
+    border-top: solid 1px #D8D8DB;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre nav.breadcrumb_topre, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre nav.breadcrumb_topre {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    z-index: 1;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre nav.breadcrumb_topre img, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre nav.breadcrumb_topre img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre nav.breadcrumb_topre span, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre nav.breadcrumb_topre span {
+    display: block;
+    margin-top: 0;
+    margin-left: 16px;
+    font-size: 16px;
+    line-height: 100%;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul {
+    width: calc(100% - 160px);
+    margin: 94px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: initial;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li {
+    width: calc((100vw - 160px - 24px) / 7);
+    height: calc((100vw - 160px - 24px) / 7);
+    margin-left: 4px;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li a, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li a img, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li a img {
+    width: 100px;
+    height: 100px;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li a span, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li a span {
+    display: block;
+    font-family: "yu-mincho-pr6n", sans-serif;
+    margin-top: 8px;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(1), header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(7), header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(1), header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(7) {
+    margin-left: 0;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(1), header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(1) {
+    background-color: #F1F1F4;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(1) a, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(1) a {
+    font-family: "yu-mincho-pr6n", sans-serif;
   }
   header.top_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul nav.guide-nav_topre, header.down_topre .container_topre nav.gnav_topre ul li nav.medium_topre ul nav.guide-nav_topre {
     width: 100%;
@@ -585,11 +669,61 @@ button {
     margin-left: 8px;
     font-family: "yu-mincho-pr6n", sans-serif;
   }
+  header.top_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul, header.down_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul {
+    padding-top: 60px;
+    margin: 0 auto;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul li, header.down_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul li {
+    width: calc((100vw - 160px - 80px) / 6);
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul li a, header.down_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul li a {
+    display: block;
+    height: fit-content;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul li a img, header.down_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul li a img {
+    width: calc((100vw - 160px - 80px) / 6);
+    height: calc((100vw - 160px - 80px) / 6);
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul li a span, header.down_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul li a span {
+    display: block;
+    margin-top: 4px;
+    font-size: 16px;
+    text-align: initial;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre button, header.down_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre button {
+    display: block;
+    width: 400px;
+    height: 56px;
+    border: none;
+    border-radius: 50px;
+    background-color: #414143;
+    padding: 0;
+    margin: 44px auto 0 auto;
+    position: relative;
+    top: inherit;
+    right: initial;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre button a, header.down_topre .container_topre nav.gnav_topre ul li.lp_topre nav.medium_topre button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "yu-mincho-pr6n", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0;
+  }
   header.top_topre .container_topre nav.gnav_topre ul li:nth-of-type(1), header.down_topre .container_topre nav.gnav_topre ul li:nth-of-type(1) {
     margin-left: 0;
   }
-  header.top_topre .container_topre nav.gnav_topre ul li.select_topre, header.down_topre .container_topre nav.gnav_topre ul li.select_topre {
+  header.top_topre .container_topre nav.gnav_topre ul li.gnav-select_topre, header.down_topre .container_topre nav.gnav_topre ul li.gnav-select_topre {
     border-bottom: solid 2px #B11232;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre, header.down_topre .container_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre {
+    display: block;
+  }
+  header.top_topre .container_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre ul li nav.small-select_topre, header.down_topre .container_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre ul li nav.small-select_topre {
+    display: block;
   }
   header.top_topre .container_topre nav.search-nav_topre, header.down_topre .container_topre nav.search-nav_topre {
     width: 343px;
