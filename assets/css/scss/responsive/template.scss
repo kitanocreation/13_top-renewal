@@ -45,6 +45,7 @@
                             @include center;
                             font-family: $font3;
                             text-align: center;
+                            cursor: pointer;
 
                             nav.medium_topre {
                                 display: none;
@@ -54,6 +55,18 @@
                                 position: absolute;
                                 top: 100%;
                                 left: 0;
+                                animation: open_topre .2s forwards;
+
+                                @keyframes open_topre {
+                                    
+                                    from {
+                                        opacity: 100%;
+                                    }
+
+                                    to {
+                                        opacity: 0;
+                                    }
+                                }
 
                                 button {
                                     border: none;
@@ -317,9 +330,22 @@
 
                         li.gnav-select_topre {
                             border-bottom: solid 2px $red;
+                            transition-duration: .2s;
 
                             nav.medium-select_topre {
                                 display: block;
+                                animation: open_topre .2s forwards;
+
+                                @keyframes open_topre {
+                                    
+                                    from {
+                                        opacity: 0;
+                                    }
+
+                                    to {
+                                        opacity: 100%;
+                                    }
+                                }
 
                                 ul {
 

@@ -65,6 +65,12 @@ $(function() {
         $guideTopre.css('margin-top', '110px');
     }
 
+    /* gnav-topre */
+    $('nav.gnav_topre > ul > li').hover(function() {
+        $(this).toggleClass('gnav-select_topre');
+        $(this).find('nav.medium_topre').toggleClass('medium-select_topre');
+    });
+
     /* drawer_topre */
     $('li.drawerbutton_topre').on('click', function() {
 

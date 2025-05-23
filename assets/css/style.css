@@ -1113,6 +1113,7 @@ button {
     align-items: center;
     font-family: "yu-mincho-pr6n", sans-serif;
     text-align: center;
+    cursor: pointer;
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre {
     display: none;
@@ -1122,6 +1123,15 @@ button {
     position: absolute;
     top: 100%;
     left: 0;
+    animation: open_topre 0.2s forwards;
+  }
+  @keyframes open_topre {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 0;
+    }
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre button, header.down_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre button {
     border: none;
@@ -1347,9 +1357,19 @@ button {
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre {
     border-bottom: solid 2px #B11232;
+    transition-duration: 0.2s;
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre {
     display: block;
+    animation: open_topre 0.2s forwards;
+  }
+  @keyframes open_topre {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100%;
+    }
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre ul li nav.small-select_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre ul li nav.small-select_topre {
     display: block;
