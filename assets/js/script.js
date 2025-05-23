@@ -103,4 +103,16 @@ $(function() {
         pauseOnHover: false,
         pauseOnFocus: false
     });
+
+    /* review_topre */
+    $('section.review_topre ul li a .con_topre p').each(function() {
+        const $p = $(this);
+        const maxLength = parseInt($p.data('max-length'), 10);
+        const originalText = $p.text();
+        if(originalText.length > maxLength) {
+        
+            const truncatedText = originalText.slice(0, maxLength) + '...';
+            $p.text(truncatedText);
+        }
+    });
 });
