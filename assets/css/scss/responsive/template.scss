@@ -29,185 +29,185 @@
             .con_topre {
                 height: 100%;
                 display: flex;
-            }
 
-            nav.gnav_topre {
+                nav.gnav_topre {
 
-                ul {
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    list-style: none;
-
-                    li {
-                        width: 120px;
+                    ul {
                         height: 100%;
-                        margin-left: 16px;
-                        @include center;
-                        font-family: $font3;
-                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        list-style: none;
 
-                        nav.medium_topre {
-                            display: none;
-                            width: 100vw;
-                            background-color: $white;
-                            padding-bottom: 40px;
-                            position: absolute;
-                            top: 100%;
-                            left: 0;
+                        li {
+                            width: 120px;
+                            height: 100%;
+                            margin-left: 16px;
+                            @include center;
+                            font-family: $font3;
+                            text-align: center;
 
-                            button {
-                                border: none;
-                                background-color: transparent;
+                            nav.medium_topre {
+                                display: none;
+                                width: 100vw;
+                                background-color: $white;
+                                padding-bottom: 40px;
                                 position: absolute;
-                                top: 40px;
-                                right: 80px;
-                                z-index: 1;
+                                top: 100%;
+                                left: 0;
 
-                                img {
-                                    display: block;
-                                    width: 24px;
-                                    height: 24px;
-                                }
-
-                                span {
-                                    display: block;
-                                    font-size: 8px;
-                                    letter-spacing: -.05em;
-                                    line-height: 100%;
-                                }
-                            }
-
-                            ul {
-                                width: calc(100% - 160px);
-                                margin: 94px auto 0 auto;
-                                display: flex;
-                                flex-wrap: wrap;
-                                justify-content: space-between;
-
-                                li {
-                                    width: calc(((100vw - 160px) - 24px) / 7);
-                                    height: calc(((100vw - 160px) - 24px) / 7);
-                                    margin-left: 0;
-                                    @include center;
-                                    flex-direction: column;
+                                button {
+                                    border: none;
+                                    background-color: transparent;
+                                    position: absolute;
+                                    top: 40px;
+                                    right: 80px;
+                                    z-index: 1;
 
                                     img {
-                                        width: 100px;
-                                        height: 100px;
+                                        display: block;
+                                        width: 24px;
+                                        height: 24px;
                                     }
 
                                     span {
                                         display: block;
-                                        font-family: $font3;
-                                        margin-top: 8px;
-                                    }
-
-                                    nav.small_topre {
-                                        display: none;
-                                        width: 100vw;
-                                        border-top: solid 1px $border-color;
-                                        background-color: $white;
-                                        @include absolute;
-
-                                        nav.breadcrumb_topre {
-                                            display: flex;
-                                            align-items: center;
-                                            position: absolute;
-                                            top: 40px;
-                                            left: 80px;
-                                            z-index: 1;
-
-                                            img {
-                                                display: block;
-                                                width: 24px;
-                                                height: 24px;
-                                            }                                        
-
-                                            span {
-                                                display: block;
-                                                margin-top: 0;
-                                                margin-left: 16px;
-                                                font-size: 16px;
-                                                line-height: 100%;
-                                            }
-                                        }
-
-                                        ul {
-                                            width: calc(100% - 160px);
-                                            margin: 94px auto 0 auto;
-                                            display: flex;
-                                            flex-wrap: wrap;
-                                            justify-content: initial;
-
-                                            li {
-                                                width: calc(((100vw - 160px) - 24px) / 7);
-                                                height: calc(((100vw - 160px) - 24px) / 7);
-                                                margin-left: 4px;
-
-                                                a {
-                                                    @include center;
-                                                    flex-direction: column;
-
-                                                    img {
-                                                        width: 100px;
-                                                        height: 100px;
-                                                    }
-
-                                                    span {
-                                                        display: block;
-                                                        font-family: $font3;
-                                                        margin-top: 8px;
-                                                    }
-                                                }
-                                            }
-
-                                            li:nth-of-type(1), li:nth-of-type(7) {
-                                                margin-left: 0;
-                                            }
-
-                                            li:nth-of-type(1) {
-                                                background-color: $grey;
-
-                                                a {
-                                                    font-family: $font3;
-                                                }
-                                            }
-                                        }
+                                        font-size: 8px;
+                                        letter-spacing: -.05em;
+                                        line-height: 100%;
                                     }
                                 }
 
-                                nav.guide-nav_topre {
-                                    width: 100%;
-                                    height: 60px;
-                                    margin: 24px auto 0 auto;
+                                ul {
+                                    width: calc(100% - 160px);
+                                    margin: 94px auto 0 auto;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: space-between;
 
-                                    ul {
-                                        width: 100%;
-                                        height: 100%;
-                                        margin: 0 0 0 0;
-                                        display: flex;
-                                        justify-content: space-between;
+                                    li {
+                                        width: calc(((100vw - 160px) - 24px) / 7);
+                                        height: calc(((100vw - 160px) - 24px) / 7);
+                                        margin-left: 0;
+                                        @include center;
+                                        flex-direction: column;
 
-                                        li {
-                                            width: calc((100% - 8px) / 3);
-                                            height: 100%;
-                                            background-color: $grey;
+                                        img {
+                                            width: 100px;
+                                            height: 100px;
+                                        }
 
-                                            a {
-                                                @include center;
-                                                flex-direction: row;
+                                        span {
+                                            display: block;
+                                            font-family: $font3;
+                                            margin-top: 8px;
+                                        }
+
+                                        nav.small_topre {
+                                            display: none;
+                                            width: 100vw;
+                                            border-top: solid 1px $border-color;
+                                            background-color: $white;
+                                            @include absolute;
+
+                                            nav.breadcrumb_topre {
+                                                display: flex;
+                                                align-items: center;
+                                                position: absolute;
+                                                top: 40px;
+                                                left: 80px;
+                                                z-index: 1;
 
                                                 img {
+                                                    display: block;
                                                     width: 24px;
                                                     height: 24px;
-                                                }
+                                                }                                        
 
                                                 span {
                                                     display: block;
                                                     margin-top: 0;
-                                                    margin-left: 8px;
-                                                    font-family: $font3;
+                                                    margin-left: 16px;
+                                                    font-size: 16px;
+                                                    line-height: 100%;
+                                                }
+                                            }
+
+                                            ul {
+                                                width: calc(100% - 160px);
+                                                margin: 94px auto 0 auto;
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                justify-content: initial;
+
+                                                li {
+                                                    width: calc(((100vw - 160px) - 24px) / 7);
+                                                    height: calc(((100vw - 160px) - 24px) / 7);
+                                                    margin-left: 4px;
+
+                                                    a {
+                                                        @include center;
+                                                        flex-direction: column;
+
+                                                        img {
+                                                            width: 100px;
+                                                            height: 100px;
+                                                        }
+
+                                                        span {
+                                                            display: block;
+                                                            font-family: $font3;
+                                                            margin-top: 8px;
+                                                        }
+                                                    }
+                                                }
+
+                                                li:nth-of-type(1), li:nth-of-type(7) {
+                                                    margin-left: 0;
+                                                }
+
+                                                li:nth-of-type(1) {
+                                                    background-color: $grey;
+
+                                                    a {
+                                                        font-family: $font3;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    nav.guide-nav_topre {
+                                        width: 100%;
+                                        height: 60px;
+                                        margin: 24px auto 0 auto;
+
+                                        ul {
+                                            width: 100%;
+                                            height: 100%;
+                                            margin: 0 0 0 0;
+                                            display: flex;
+                                            justify-content: space-between;
+
+                                            li {
+                                                width: calc((100% - 8px) / 3);
+                                                height: 100%;
+                                                background-color: $grey;
+
+                                                a {
+                                                    @include center;
+                                                    flex-direction: row;
+
+                                                    img {
+                                                        width: 24px;
+                                                        height: 24px;
+                                                    }
+
+                                                    span {
+                                                        display: block;
+                                                        margin-top: 0;
+                                                        margin-left: 8px;
+                                                        font-family: $font3;
+                                                    }
                                                 }
                                             }
                                         }
@@ -215,189 +215,189 @@
                                 }
                             }
                         }
-                    }
 
-                    li.category_topre {
-                        margin-left: 0;
-                    }
+                        li.category_topre {
+                            margin-left: 0;
+                        }
 
-                    li.lp_topre {
+                        li.lp_topre {
 
-                        nav.medium_topre {
+                            nav.medium_topre {
 
-                            ul {
-                                padding-top: 60px;
-                                margin: 0 auto;
+                                ul {
+                                    padding-top: 60px;
+                                    margin: 0 auto;
 
-                                li {
-                                    width: calc(((100vw - 160px) - (16px * 5)) / 6);
+                                    li {
+                                        width: calc(((100vw - 160px) - (16px * 5)) / 6);
 
-                                    a {
-                                        display: block;
-                                        height: fit-content;
-
-                                        img {
-                                            width: calc(((100vw - 160px) - (16px * 5)) / 6);
-                                            height: calc(((100vw - 160px) - (16px * 5)) / 6);
-                                        }
-
-                                        span {
+                                        a {
                                             display: block;
-                                            margin-top: 4px;
-                                            font-size: 16px;
-                                            text-align: initial;
+                                            height: fit-content;
+
+                                            img {
+                                                width: calc(((100vw - 160px) - (16px * 5)) / 6);
+                                                height: calc(((100vw - 160px) - (16px * 5)) / 6);
+                                            }
+
+                                            span {
+                                                display: block;
+                                                margin-top: 4px;
+                                                font-size: 16px;
+                                                text-align: initial;
+                                            }
                                         }
                                     }
                                 }
-                            }
 
-                            button {
-                                display: block;
-                                width: 400px;
-                                height: 56px;
-                                border: none;
-                                border-radius: 50px;
-                                background-color: $black;
-                                padding: 0;
-                                margin: calc(24px + 20px) auto 0 auto;
-                                position: relative;
-                                top: inherit;
-                                right: initial;
-
-                                a {
-                                    @include center;
-                                    font-family: $font3;
-                                    font-size: 18px;
-                                    font-weight: 700;
-                                    color: $white;
-                                    letter-spacing: 0;
-                                }
-                            }
-                        }
-                    }
-
-                    li.guide_topre {
-                        padding-bottom: 0;
-                        position: relative;
-                        
-                        nav.medium_topre {
-                            width: 143px;
-                            background-color: $grey;
-                            padding-bottom: 0;
-                            transform: translateY(8px);
-
-                            ul {
-                                width: 100%;
-                                margin: 0 0 0 0;
-
-                                li {
-                                    width: 100%;
-                                    height: 60px;
+                                button {
                                     display: block;
+                                    width: 400px;
+                                    height: 56px;
+                                    border: none;
+                                    border-radius: 50px;
+                                    background-color: $black;
+                                    padding: 0;
+                                    margin: calc(24px + 20px) auto 0 auto;
+                                    position: relative;
+                                    top: inherit;
+                                    right: initial;
 
                                     a {
-                                        display: flex;
-                                        align-items: center;
-
-                                        img {
-                                            width: 24px;
-                                            height: 24px;
-                                            margin-left: 12px;
-                                        }
-
-                                        span {
-                                            display: block;
-                                            margin-top: 0;
-                                            margin-left: 8px;
-                                        }
+                                        @include center;
+                                        font-family: $font3;
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                        color: $white;
+                                        letter-spacing: 0;
                                     }
                                 }
                             }
                         }
-                    }
 
-                    li.gnav-select_topre {
-                        border-bottom: solid 2px $red;
+                        li.guide_topre {
+                            padding-bottom: 0;
+                            position: relative;
+                            
+                            nav.medium_topre {
+                                width: 143px;
+                                background-color: $grey;
+                                padding-bottom: 0;
+                                transform: translateY(8px);
 
-                        nav.medium-select_topre {
-                            display: block;
+                                ul {
+                                    width: 100%;
+                                    margin: 0 0 0 0;
 
-                            ul {
-
-                                li {
-
-                                    nav.small-select_topre {
+                                    li {
+                                        width: 100%;
+                                        height: 60px;
                                         display: block;
+
+                                        a {
+                                            display: flex;
+                                            align-items: center;
+
+                                            img {
+                                                width: 24px;
+                                                height: 24px;
+                                                margin-left: 12px;
+                                            }
+
+                                            span {
+                                                display: block;
+                                                margin-top: 0;
+                                                margin-left: 8px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        li.gnav-select_topre {
+                            border-bottom: solid 2px $red;
+
+                            nav.medium-select_topre {
+                                display: block;
+
+                                ul {
+
+                                    li {
+
+                                        nav.small-select_topre {
+                                            display: block;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
-            }
 
-            nav.search-nav_topre {
-                width: calc(375px - 32px);
-                border-top: none;
-                padding: 0 0 0 0;
-                margin-left: 70px;
-                display: flex !important;
-                align-items: center;
+                nav.search-nav_topre {
+                    width: calc(375px - 32px);
+                    border-top: none;
+                    padding: 0 0 0 0;
+                    margin-left: 70px;
+                    display: flex !important;
+                    align-items: center;
 
-                .category_topre {
-                    width: 100px;
-                    height: 36px;
-                    border-radius: 4px;
-                    margin-top: initial;
-                    @include center;
+                    .category_topre {
+                        width: 100px;
+                        height: 36px;
+                        border-radius: 4px;
+                        margin-top: initial;
+                        @include center;
 
-                    select {
-                        width: 100%;
-                        height: 100%;
-                        background-color: $grey;
-                        padding: 0 24px;
-                        @include font-s;
-                        letter-spacing: 0;
-                        line-height: 100%;
+                        select {
+                            width: 100%;
+                            height: 100%;
+                            background-color: $grey;
+                            padding: 0 24px;
+                            @include font-s;
+                            letter-spacing: 0;
+                            line-height: 100%;
+                        }
+
+                        img {
+                            display: none;
+                        }
                     }
 
-                    img {
-                        display: none;
+                    .keyword_topre {
+                        width: 223px;
+                        height: 36px;
+                        border-radius: 4px;
+                        background-color: $grey;
+                        margin-top: initial;
+                        @include center;
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            margin-left: 12px;
+                        }
+
+                        input {
+                            display: block;
+                            width: calc(100% - 24px);
+                            height: 100%;
+                            background-color: $grey;
+                            padding-left: 10px;
+                            display: flex;
+                            align-items: center;
+                        }
                     }
                 }
 
-                .keyword_topre {
-                    width: 223px;
-                    height: 36px;
-                    border-radius: 4px;
-                    background-color: $grey;
-                    margin-top: initial;
-                    @include center;
+                nav.mnav_topre {
+                    margin-right: 80px !important;
+                    margin-left: 24px;
 
-                    img {
-                        width: 24px;
-                        height: 24px;
-                        margin-left: 12px;
-                    }
-
-                    input {
-                        display: block;
-                        width: calc(100% - 24px);
+                    ul {
                         height: 100%;
-                        background-color: $grey;
-                        padding-left: 10px;
-                        display: flex;
-                        align-items: center;
                     }
-                }
-            }
-
-            nav.mnav_topre {
-                margin-right: 80px !important;
-                margin-left: 24px;
-
-                ul {
-                    height: 100%;
                 }
             }
         }

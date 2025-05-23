@@ -85,13 +85,18 @@ $(function() {
     });
     $('ul.category_topre li').on('click', function() {
 
-        if($(this).hasClass('open_topre')) {
+        if ($(this).hasClass('open_topre')) {
 
             $(this).removeClass('open_topre');
+            $(this).find('.large_topre span:eq(1)').text('+');
         } else {
-            
-            $('li.open_topre').removeClass('open_topre');
+
+            $('ul.category_topre li').each(function() {
+                $(this).removeClass('open_topre');
+                $(this).find('.large_topre span:eq(1)').text('+');
+            });
             $(this).addClass('open_topre');
+            $(this).find('.large_topre span:eq(1)').text('-');
         }
     });
 
@@ -102,6 +107,19 @@ $(function() {
         autoplaySpeed: 5000,
         pauseOnHover: false,
         pauseOnFocus: false
+    });
+
+    /*  */
+    $('main.top_topre button').on('click', function() {
+        if($('main.top_topre ul').hasClass('open_topre')) {
+            $('main.top_topre ul').removeClass('open_topre');
+            $('main.top_topre button').removeClass('open_topre');
+            $(this).parent('section').find('ul').addClass('open_topre');
+            $(this).parent('section').find('button').addClass('open_topre');
+        } else {
+            $(this).parent('section').find('ul').addClass('open_topre');
+            $(this).parent('section').find('button').addClass('open_topre');
+        }
     });
 
     /* review_topre */

@@ -52,6 +52,7 @@ header.top_topre, header.down_topre {
                     align-items: center;
 
                     li {
+                        width: 40px;
                         margin-left: 8px;
 
                         a {
@@ -166,7 +167,7 @@ nav.drawer_topre {
     width: 100%;
     background-color: $white;
     @include fixed;
-    transform: translateX(-100vw);
+    transform: translateX(100vw);
     z-index: 9998;
     transition-duration: .5s;
 

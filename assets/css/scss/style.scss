@@ -118,6 +118,17 @@ html {
                 h2 {
                     @include h2;
                 }
+
+                ul.open_topre {
+
+                    li:nth-of-type(n+4) {
+                        display: block;
+                    }
+                }
+
+                button.open_topre {
+                    display: none;
+                }
             }
 
             section.lp_topre {
