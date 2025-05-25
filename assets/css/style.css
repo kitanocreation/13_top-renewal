@@ -1123,6 +1123,7 @@ button {
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: -1;
     animation: open_topre 0.2s forwards;
   }
   @keyframes open_topre {
@@ -1278,6 +1279,9 @@ button {
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.category_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.category_topre {
     margin-left: 0;
   }
+  header.top_topre .container_topre .con_topre nav.gnav_topre ul li.lp_topre nav.medium_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.lp_topre nav.medium_topre {
+    z-index: -1;
+  }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul {
     padding-top: 60px;
     margin: 0 auto;
@@ -1330,7 +1334,7 @@ button {
     width: 143px;
     background-color: #F1F1F4;
     padding-bottom: 0;
-    transform: translateY(8px);
+    z-index: -1;
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.guide_topre nav.medium_topre ul, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.guide_topre nav.medium_topre ul {
     width: 100%;
@@ -1361,6 +1365,7 @@ button {
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre {
     display: block;
+    z-index: 1;
     animation: open_topre 0.2s forwards;
   }
   @keyframes open_topre {
@@ -1668,12 +1673,41 @@ button {
   }
   html body main.top_topre section.new_topre, html body main.top_topre section.recommend_topre, html body main.top_topre section.check_topre {
     margin-top: 128px;
+    position: relative;
+  }
+  html body main.top_topre section.new_topre button.arrow-icon_topre, html body main.top_topre section.recommend_topre button.arrow-icon_topre, html body main.top_topre section.check_topre button.arrow-icon_topre {
+    width: 24px;
+    height: 24px;
+    border: none;
+    margin: 0 0 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transition-duration: 0.2s;
+  }
+  html body main.top_topre section.new_topre button.arrow-icon_topre:hover, html body main.top_topre section.recommend_topre button.arrow-icon_topre:hover, html body main.top_topre section.check_topre button.arrow-icon_topre:hover {
+    opacity: 0.25;
+  }
+  html body main.top_topre section.new_topre button.arrow-icon_topre img, html body main.top_topre section.recommend_topre button.arrow-icon_topre img, html body main.top_topre section.check_topre button.arrow-icon_topre img {
+    width: 100%;
+    height: 100%;
+  }
+  html body main.top_topre section.new_topre button.prev-icon_topre, html body main.top_topre section.recommend_topre button.prev-icon_topre, html body main.top_topre section.check_topre button.prev-icon_topre {
+    left: 40px;
+    transform: translateY(-50%);
+    opacity: 0.25;
+  }
+  html body main.top_topre section.new_topre button.next-icon_topre, html body main.top_topre section.recommend_topre button.next-icon_topre, html body main.top_topre section.check_topre button.next-icon_topre {
+    left: calc(100vw - 40px);
+    transform: translate(-100%, -50%);
+    cursor: pointer;
   }
   html body main.top_topre section.new_topre ul, html body main.top_topre section.recommend_topre ul, html body main.top_topre section.check_topre ul {
     width: calc(200vw + 80px - 160px);
     margin: 24px 0 0 0;
     flex-wrap: nowrap;
     justify-content: initial;
+    transition-duration: 0.7s;
   }
   html body main.top_topre section.new_topre ul li, html body main.top_topre section.recommend_topre ul li, html body main.top_topre section.check_topre ul li {
     width: calc((100vw - 160px - 80px) / 6);
@@ -1698,12 +1732,42 @@ button {
   }
   html body main.top_topre section.review_topre {
     margin-top: 128px;
+    position: relative;
+  }
+  html body main.top_topre section.review_topre button.arrow-icon_topre {
+    width: 24px;
+    height: 24px;
+    border: none;
+    margin: 0 0 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transition-duration: 0.2s;
+  }
+  html body main.top_topre section.review_topre button.arrow-icon_topre:hover {
+    opacity: 0.25;
+  }
+  html body main.top_topre section.review_topre button.arrow-icon_topre img {
+    width: 100%;
+    height: 100%;
+  }
+  html body main.top_topre section.review_topre button.prev-icon_topre {
+    left: 40px;
+    transform: translateY(-50%);
+    opacity: 0.25;
+  }
+  html body main.top_topre section.review_topre button.next-icon_topre {
+    left: calc(100vw - 40px);
+    transform: translate(-100%, -50%);
+    cursor: pointer;
   }
   html body main.top_topre section.review_topre ul {
     width: calc(200vw + 80px - 160px);
     margin: 24px 0 0 0;
     display: flex;
     flex-wrap: nowrap;
+    position: relative;
+    transition-duration: 0.7s;
   }
   html body main.top_topre section.review_topre ul li {
     width: calc((100vw - 160px - 32px) / 3);
@@ -1731,6 +1795,17 @@ button {
   }
   html body main.top_topre section.review_topre button {
     display: none;
+  }
+  html body main.top_topre section.active_topre button.prev-icon_topre {
+    opacity: 1;
+    cursor: pointer;
+  }
+  html body main.top_topre section.active_topre button.next-icon_topre {
+    opacity: 0.25;
+    cursor: initial;
+  }
+  html body main.top_topre section.active_topre ul {
+    transform: translateX(-100vw);
   }
   html body main.top_topre section.search_topre {
     padding: 64px 0 64px 0;

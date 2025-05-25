@@ -88,6 +88,7 @@ button {
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: -1;
     animation: open_topre 0.2s forwards;
   }
   @keyframes open_topre {
@@ -243,6 +244,9 @@ button {
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.category_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.category_topre {
     margin-left: 0;
   }
+  header.top_topre .container_topre .con_topre nav.gnav_topre ul li.lp_topre nav.medium_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.lp_topre nav.medium_topre {
+    z-index: -1;
+  }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.lp_topre nav.medium_topre ul {
     padding-top: 60px;
     margin: 0 auto;
@@ -295,7 +299,7 @@ button {
     width: 143px;
     background-color: #F1F1F4;
     padding-bottom: 0;
-    transform: translateY(8px);
+    z-index: -1;
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.guide_topre nav.medium_topre ul, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.guide_topre nav.medium_topre ul {
     width: 100%;
@@ -326,6 +330,7 @@ button {
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.gnav-select_topre nav.medium-select_topre {
     display: block;
+    z-index: 1;
     animation: open_topre 0.2s forwards;
   }
   @keyframes open_topre {

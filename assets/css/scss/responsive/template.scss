@@ -30,7 +30,7 @@
                 height: 100%;
                 display: flex;
 
-                nav.gnav_topre {
+                nav.gnav_topre {                    
 
                     ul {
                         height: 100%;
@@ -55,6 +55,7 @@
                                 position: absolute;
                                 top: 100%;
                                 left: 0;
+                                z-index: -1;
                                 animation: open_topre .2s forwards;
 
                                 @keyframes open_topre {
@@ -236,6 +237,7 @@
                         li.lp_topre {
 
                             nav.medium_topre {
+                                z-index: -1;
 
                                 ul {
                                     padding-top: 60px;
@@ -296,7 +298,7 @@
                                 width: 143px;
                                 background-color: $grey;
                                 padding-bottom: 0;
-                                transform: translateY(8px);
+                                z-index: -1;
 
                                 ul {
                                     width: 100%;
@@ -334,6 +336,7 @@
 
                             nav.medium-select_topre {
                                 display: block;
+                                z-index: 1;
                                 animation: open_topre .2s forwards;
 
                                 @keyframes open_topre {
