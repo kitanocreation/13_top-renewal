@@ -1334,6 +1334,7 @@ button {
     width: 143px;
     background-color: #F1F1F4;
     padding-bottom: 0;
+    transform: translateY(2px);
     z-index: -1;
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li.guide_topre nav.medium_topre ul, header.down_topre .container_topre .con_topre nav.gnav_topre ul li.guide_topre nav.medium_topre ul {
