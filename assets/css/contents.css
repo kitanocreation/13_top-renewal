@@ -1,0 +1,119 @@
+html body .breadcrumb {
+  margin-left: 16px;
+}
+html body main.guide_topre h2 {
+  margin-left: 16px;
+  font-family: "yu-mincho-pr6n", sans-serif;
+  font-size: 28px;
+}
+html body main.guide_topre ul {
+  margin-top: 16px;
+}
+html body main.guide_topre ul li {
+  border-top: solid 1px #D8D8DB;
+}
+html body main.guide_topre ul li span {
+  height: 72px;
+  padding-left: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "yu-gothic-pr6n", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+html body main.guide_topre ul li span span {
+  display: block;
+  width: auto;
+  height: auto;
+  margin-right: 16px;
+}
+html body main.guide_topre ul li ul {
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+}
+html body main.guide_topre ul li ul li {
+  height: 52px;
+  margin-left: 0;
+  border-top: solid 1px #D8D8DB;
+  background-color: #F1F1F4;
+}
+html body main.guide_topre ul li ul li a {
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  font-family: "yu-gothic-pr6n", sans-serif;
+}
+html body main.guide_topre ul li ul li a img {
+  margin-left: 12px;
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+html body main.guide_topre ul li.open_topre ul {
+  max-height: 100vh;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+
+@media screen and (min-width: 768px) {
+  html body {
+    overflow-x: initial;
+  }
+  html body .breadcrumb {
+    margin-top: 17.5px;
+    margin-left: 80px;
+  }
+  html body main.guide_topre {
+    margin-top: 33.5px;
+  }
+  html body main.guide_topre h2 {
+    margin-left: 80px;
+    font-size: 32px;
+  }
+  html body main.guide_topre .container {
+    width: calc(100vw - 160px);
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  html body main.guide_topre .container ul {
+    width: 53vw;
+    margin-top: 0;
+  }
+  html body main.guide_topre .container ul li span {
+    height: 80px;
+    padding-left: 24px;
+    font-size: 18px;
+  }
+  html body main.guide_topre .container ul li span span {
+    height: auto;
+    margin-right: 24px;
+  }
+  html body main.guide_topre .container ul li:nth-last-of-type(1) {
+    border-bottom: solid 1px #D8D8DB;
+  }
+  html body main.guide_topre .container button {
+    width: 31vw;
+    height: 56px;
+    border-radius: 50px;
+    background-color: #414143;
+    position: sticky;
+    top: 310px;
+  }
+  html body main.guide_topre .container button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "yu-mincho-pr6n", sans-serif;
+    font-size: 18px;
+    color: #F1F1F4;
+  }
+  html body main.guide_topre .container button a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: invert(1);
+  }
+}

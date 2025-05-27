@@ -190,6 +190,17 @@
                                         }
                                     }
 
+                                    li:nth-of-type(n+3) {
+
+                                        nav.small_topre {
+                                            height: 460px;
+
+                                            ul {
+                                                align-items: initial;
+                                            }
+                                        }
+                                    }
+
                                     nav.guide-nav_topre {
                                         width: 100%;
                                         height: 60px;

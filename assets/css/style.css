@@ -265,7 +265,7 @@ nav.drawer_topre ul.guide_topre li:nth-of-type(1) {
   border-left: none;
 }
 nav.drawer_topre ul.category_topre {
-  height: calc(100vh - 190px);
+  height: calc(100vh - 215px);
   overflow-y: auto;
 }
 nav.drawer_topre ul.category_topre li .large_topre {
@@ -1242,6 +1242,12 @@ button {
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(1) a, header.down_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre ul li nav.small_topre ul li:nth-of-type(1) a {
     font-family: "yu-mincho-pr6n", sans-serif;
+  }
+  header.top_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre ul li:nth-of-type(n+3) nav.small_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre ul li:nth-of-type(n+3) nav.small_topre {
+    height: 460px;
+  }
+  header.top_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre ul li:nth-of-type(n+3) nav.small_topre ul, header.down_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre ul li:nth-of-type(n+3) nav.small_topre ul {
+    align-items: initial;
   }
   header.top_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre ul nav.guide-nav_topre, header.down_topre .container_topre .con_topre nav.gnav_topre ul li nav.medium_topre ul nav.guide-nav_topre {
     width: 100%;

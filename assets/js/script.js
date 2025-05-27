@@ -106,6 +106,20 @@ $(function() {
         pauseOnFocus: false
     });
 
+    /* icon_topre */
+    // クリックする要素
+    $('nav.icon_topre ul li').on('click', function() {
+        // スクロール先のh2要素
+        var targetH2 = $('h2:contains("目標のテキストのh2")'); // 特定のテキストを含むh2を探す
+
+        if (targetH2.length) { // 対象のh2が存在するか確認
+            // スクロールアニメーション
+            $('html, body').animate({
+                scrollTop: targetH2.offset().top
+            }, 800); // 800ミリ秒でスクロール（速度は調整可能）
+        }
+    });
+
     /* ranking_topre */
     $('p.ranking-icon_topre img').each(function(index) {
         let srcToSet;
