@@ -457,6 +457,12 @@
 
                     a {
                         flex-direction: row;
+
+                        span {
+                            margin-top: 0;
+                            margin-left: 4px;
+                            font-size: 16px;
+                        }
                     }
                 }
             }
@@ -505,6 +511,10 @@
                     li {
                         margin-top: 0;
                         margin-left: 24px;
+
+                        a {
+                            font-size: 14px;
+                        }
                     }
 
                     li:nth-of-type(1) {

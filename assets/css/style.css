@@ -266,6 +266,7 @@ nav.drawer_topre ul.guide_topre li:nth-of-type(1) {
 }
 nav.drawer_topre ul.category_topre {
   height: calc(100vh - 215px);
+  margin-top: 0;
   overflow-y: auto;
 }
 nav.drawer_topre ul.category_topre li .large_topre {
@@ -975,6 +976,7 @@ html body main.top_topre section.search_topre nav.search-nav_topre .category_top
 }
 html body main.top_topre section.search_topre nav.search-nav_topre .category_topre select {
   width: 65px;
+  background-color: transparent;
   font-size: 12px;
   line-height: 100%;
 }
@@ -1188,12 +1190,149 @@ button {
   height: 24px;
 }
 
+.category_topre {
+  padding: 0 0 0 0;
+  margin-top: 19px;
+}
+.category_topre .breadcrumb {
+  margin-bottom: 0;
+  margin-left: 16px;
+}
+.category_topre .container {
+  margin-top: 19px;
+}
+.category_topre .container main.main section.main-section .fv_topre {
+  height: 126px;
+}
+.category_topre .container main.main section.main-section .category-title {
+  display: none;
+}
+.category_topre .container main.main section.main-section p.total-count {
+  margin: 40px 0 0 16px;
+  font-size: 12px;
+}
+.category_topre .container main.main section.main-section p.total-count span {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.category_topre .container main.main section.main-section ul.item-list {
+  width: calc(100vw - 32px);
+  margin: 40px auto 0 auto;
+  justify-content: space-between;
+}
+.category_topre .container main.main section.main-section ul.item-list li {
+  width: calc((100% - 16px) / 2);
+  margin: 40px 0 0 16px;
+}
+.category_topre .container main.main section.main-section ul.item-list li .item-list-review {
+  margin-top: 8px;
+}
+.category_topre .container main.main section.main-section ul.item-list li p.item-name {
+  margin-top: 4px;
+  font-weight: 700;
+}
+.category_topre .container main.main section.main-section ul.item-list li .con_topre {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.category_topre .container main.main section.main-section ul.item-list li .con_topre .text_topre p {
+  font-size: 12px;
+}
+.category_topre .container main.main section.main-section ul.item-list li .con_topre .text_topre p span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.category_topre .container main.main section.main-section ul.item-list li .con_topre .text_topre p.sale-discount-rate {
+  color: #B11232 !important;
+}
+.category_topre .container main.main section.main-section ul.item-list li .con_topre .favorite_topre {
+  width: 40px;
+  height: 40px;
+  border: solid 1px #757578;
+  border-radius: 50%;
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category_topre .container main.main section.main-section ul.item-list li .con_topre .favorite_topre img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0;
+}
+.category_topre .container main.main section.main-section ul.item-list li:nth-of-type(odd) {
+  margin: 40px 0 0 0;
+}
+.category_topre .container main.main section.main-section ul.item-list li:nth-of-type(1) {
+  margin: 0 0 0 0;
+}
+.category_topre .container main.main section.main-section ul.item-list li:nth-of-type(2) {
+  margin: 0 0 0 16px;
+}
+.category_topre .container main.main section.main-section .pager-wrap {
+  width: fit-content;
+  margin: 48px auto 0 auto;
+}
+.category_topre .container main.main section.main-section .pager-wrap ul.pager {
+  position: relative;
+}
+.category_topre .container main.main section.main-section .pager-wrap ul.pager img.prev_topre, .category_topre .container main.main section.main-section .pager-wrap ul.pager img.next_topre {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+}
+.category_topre .container main.main section.main-section .pager-wrap ul.pager img.prev_topre {
+  left: -24px;
+  transform: translate(-100%, -50%);
+}
+.category_topre .container main.main section.main-section .pager-wrap ul.pager img.next_topre {
+  right: -24px;
+  transform: translate(100%, -50%);
+}
+.category_topre .container main.main section.main-section .pager-wrap ul.pager img.off_topre {
+  opacity: 0.5;
+}
+.category_topre .container main.main section.main-section .pager-wrap ul.pager li:nth-last-of-type(1) {
+  width: 24px;
+}
+
 @media screen and (min-width: 768px) {
   .modal-open a.add-cart-btn {
     width: 375px;
   }
   .modal-open .favorite {
     width: 40px;
+  }
+  .category_topre .container {
+    margin-top: 17.5px;
+  }
+  .category_topre .container main.main section.main-section .fv_topre {
+    height: 430px;
+  }
+  .category_topre .container main.main section.main-section ul.item-list {
+    width: calc(100vw - 160px);
+    justify-content: initial;
+  }
+  .category_topre .container main.main section.main-section ul.item-list li {
+    width: calc((100% - 48px) / 4);
+  }
+  .category_topre .container main.main section.main-section ul.item-list li p.item-name {
+    font-size: 16px;
+  }
+  .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(odd) {
+    margin: 40px 0 0 16px;
+  }
+  .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(1) {
+    margin: 0 0 0 0;
+  }
+  .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(2), .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(3), .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(4) {
+    margin: 0 0 0 16px;
+  }
+  .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(5n) {
+    margin: 40px 0 0 0;
   }
 }
 html.topre * {
@@ -1617,6 +1756,11 @@ button {
   footer.top_topre nav.f-nav_topre ul li a {
     flex-direction: row;
   }
+  footer.top_topre nav.f-nav_topre ul li a span {
+    margin-top: 0;
+    margin-left: 4px;
+    font-size: 16px;
+  }
   footer.top_topre .container_topre {
     width: calc(100% - 160px);
     margin: 64px auto 0 auto;
@@ -1652,6 +1796,9 @@ button {
   footer.top_topre .container_topre .info-nav_topre ul li {
     margin-top: 0;
     margin-left: 24px;
+  }
+  footer.top_topre .container_topre .info-nav_topre ul li a {
+    font-size: 14px;
   }
   footer.top_topre .container_topre .info-nav_topre ul li:nth-of-type(1) {
     margin-left: 0;

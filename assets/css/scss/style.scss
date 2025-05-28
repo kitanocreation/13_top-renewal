@@ -685,6 +685,7 @@ html {
 
                         select {
                             width: 65px;
+                            background-color: transparent;
                             @include font-s;
                             line-height: 100%;
                         }

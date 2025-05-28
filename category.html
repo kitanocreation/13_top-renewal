@@ -547,7 +547,7 @@
 
         <{$module.header_topre}>
         <{$module.drawer_topre}>
-        <div class="contents">
+        <div class="contents category_topre">
             <div class="breadcrumb">
                 <span class="breadcrumb-item"><a href="<{$url.top}>">ホーム</a></span>
                 <{section name=i loop=$category.breadcrumb_list.list}>
@@ -555,9 +555,37 @@
                 <{/section}>
             </div>
             <div class="container">
-                <{$module.side}>
                 <main class="main">
                     <section class="main-section">
+                        <div class="fv_topre">
+                            <{if $category.code == 'retortcurry'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/retortcurry.jpg" alt="">
+                            <{elseif $category.code == 'meshitomo'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/meshitomo.jpg" alt="">
+                            <{elseif $category.code == 'dressing-oil'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/dressing-oil.jpg" alt="">
+                            <{elseif $category.code == 'spice-salt'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/spice-salt.jpg" alt="">
+                            <{elseif $category.code == 'vinegar-miso-sauce'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/vinegar-miso-sauce.jpg" alt="">
+                            <{elseif $category.code == 'noodles'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/noodles.jpg" alt="">
+                            <{elseif $category.code == 'soup-sidedish'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/soup-sidedish.jpg" alt="">
+                            <{elseif $category.code == 'takikomigohan'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/takikomigohan.jpg" alt="">
+                            <{elseif $category.code == 'sweets-snack'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/sweets-snack.jpg" alt="">
+                            <{elseif $category.code == 'drink'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/drink.jpg" alt="">
+                            <{elseif $category.code == 'jam-honey'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/jam-honey.jpg" alt="">
+                            <{elseif $category.code == 'goods'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/goods.jpg" alt="">
+                            <{elseif $category.code == 'wrapping'}>
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/kiwami.jpg" alt="">
+                            <{/if}>
+                        </div>
                         <div class="category-title">
                             <h2><{$category.name}></h2>
                             <dl class="list-head-sort">
@@ -568,6 +596,7 @@
                                 <dd><a href="<{$category.sort_new_url}>">新着順</a></dd>
                             </dl>
                         </div>
+                        <p class="total-count">全<span><{$category.total_count}></span>件 <{$category.display_count}>件表示</p>
                         <{if $category.child_category.has_item}>
                             <ul class="category-child-item">
                                 <{section name=i loop=$category.child_category.list}>
@@ -579,48 +608,48 @@
                         <ul class="item-list">
                             <{section name=i loop=$category.item.list}>
                                 <li>
-                                    <div class="item-icon">
-                                        <{if $category.item.list[i].is_soldout}>
-                                            <p class="item-soldout">SOLD OUT</p>
-                                        <{/if}>
-                                    </div>
-                                    <div class="item-list-image"><a href="<{$category.item.list[i].url}>"><img src="<{$category.item.list[i].image_L}>" alt=""></a></div>
-                                    <!--アイコン表示-->
-                                    <{if $category.item.list[i].icon.has_item}>
-                                        <ul class="item-list-icon">
-                                            <{section name=j loop=$category.item.list[i].icon.list}>
-                                            	<li><img src="<{$category.item.list[i].icon.list[j].image_url}>" alt=""></li>
-                                            <{/section}>
-                                        </ul>
-                                    <{/if}>
-                                    <{if $category.item.list[i].base_category.url}>
-                                        <p class="item-category"><a href="<{$category.item.list[i].base_category.url}>"><{$category.item.list[i].base_category.name}></a></p>
-                                    <{/if}>
-                                    <p class="item-name"><a href="<{$category.item.list[i].url}>"><{$category.item.list[i].name}></a></p>
-                                    <{if $category.item.list[i].is_sale}>
-                                        <p class="price original-price">￥<{$category.item.list[i].original_price|number_format}><span>（税込）</span></p>
-                                        <p class="price item-sale-price">￥<{$category.item.list[i].price|number_format}><span class="tax">（税込）</span>
-                                        <span class="sale-discount-rate">[<{$category.item.list[i].sale_rate}>%OFF</span>]</p>
-                                    <{else}>
-                                        <p class="price">￥<{$category.item.list[i].price|number_format}><span>（税込）</span></p>
-                                    <{/if}>
-                                    <{if $category.item.list[i].has_review}>
-                                        <div class="item-list-review">
-                                            <{$category.item.list[i].review.star_html}>
-                                            <p class="item-list-review-rate"><{$category.item.list[i].review.average}></p>
-                                            <p class="item-list-review-count">[<{$category.item.list[i].review.total_count}>件]</p>
+                                    <a href="<{$category.item.list[i].url}>">
+                                        <div class="item-icon">
+                                            <{if $category.item.list[i].is_soldout}>
+                                                <p class="item-soldout">SOLD OUT</p>
+                                            <{/if}>
                                         </div>
-                                    <{/if}>
+                                        <div class="item-list-image"><img src="<{$category.item.list[i].image_L}>" alt=""></div>
+                                        <{if $category.item.list[i].icon.has_item}>
+                                            <ul class="item-list-icon">
+                                                <{section name=j loop=$category.item.list[i].icon.list}>
+                                                    <li><img src="<{$category.item.list[i].icon.list[j].image_url}>" alt=""></li>
+                                                <{/section}>
+                                            </ul>
+                                        <{/if}>
+                                        <{if $category.item.list[i].has_review}>
+                                            <div class="item-list-review">
+                                                <{$category.item.list[i].review.star_html}>
+                                                <p class="item-list-review-count">(<{$category.item.list[i].review.total_count}>)</p>
+                                            </div>
+                                        <{/if}>
+                                        <p class="item-name"><{$category.item.list[i].name}></p>
+                                        <div class="con_topre">
+                                            <div class="text_topre">
+                                                <{if $category.item.list[i].is_sale}>
+                                                    <p class="price original-price">税込<span><{$category.item.list[i].original_price|number_format}></span>円</p>
+                                                    <p class="price item-sale-price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
+                                                    <p class="sale-discount-rate">[<{$category.item.list[i].sale_rate}>%OFF]</p>
+                                                <{else}>
+                                                    <p class="price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
+                                                <{/if}>
+                                            </div>
+                                            <div class="favorite_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></div>
+                                        </div>
+                                    </a>
                                 </li>
                             <{/section}>
                         </ul>
                         <div class="pager-wrap">
-                            <p class="total-count">（全<span><{$category.total_count}></span>件）<{$category.display_count}>件表示</p>
                             <{if $category.pager.has_item}>
                                 <ul class="pager">
-                                    <{if !$category.pager.is_first_display}>
-                                        <li><a href="<{$category.pager.first_url}>"><span class="prev">一番前へ</span></a></li>
-                                    <{/if}>
+                                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/prev-icon-re_topre.svg" alt="" class="prev_topre off_topre">
+                                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/next-icon.svg" alt="" class="next_topre">
                                     <{section name=i loop=$category.pager.list}>
                                         <{if $category.pager.list[i].is_current_page}>
                                             <li><span class="current"><{$category.pager.list[i].number}></span></li>
@@ -628,9 +657,6 @@
                                             <li><a href="<{$category.pager.list[i].url}>"><span><{$category.pager.list[i].number}></span></a></li>
                                         <{/if}>
                                     <{/section}>
-                                    <{if !$category.pager.is_last_display}>
-                                        <li><a href="<{$category.pager.last_url}>"><span class="next">最後へ</span></a></li>
-                                    <{/if}>
                                 </ul>
                             <{/if}>
                         </div>

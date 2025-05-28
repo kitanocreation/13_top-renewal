@@ -108,6 +108,13 @@ $(function() {
             window.location.href = finalUrl;
         }
     });
+    $keywordInput.on('search', function(event) {
+        const keyword = $keywordInput.val();
+        if(keyword) {
+            let finalUrl = baseUrl + encodeURIComponent(keyword);
+            window.location.href = finalUrl;
+        }
+    });
 
     /* mv_topre */
     $('.mv_topre').slick({
@@ -209,6 +216,50 @@ $(function() {
         } else {
             if(linkText === 'おすすめ順') {
                 $link.parents('dd').addClass('select_topre');
+            }
+        }
+    });
+
+    /* pager */
+    function updatePagerArrows() {
+        const $currentLi = $('.pager span.current').closest('li');
+        const $firstLi = $('.pager li:first-child');
+        const $lastLi = $('.pager li:last-child');
+        if($currentLi.is($firstLi)) {
+            $('.prev_topre').addClass('off_topre');
+        } else {
+            $('.prev_topre').removeClass('off_topre');
+        }
+        if($currentLi.is($lastLi)) {
+            $('.next_topre').addClass('off_topre');
+        } else {
+            $('.next_topre').removeClass('off_topre');
+        }
+    }
+    updatePagerArrows();
+    $('.prev_topre').on('click', function() {
+        if($(this).hasClass('off_topre')) {
+            return;
+        }
+        const $currentLi = $('.pager span.current').closest('li');
+        const $prevLi = $currentLi.prev('li');
+        if($prevLi.length) {
+            const $prevLink = $prevLi.find('a');
+            if($prevLink.length) {
+                window.location.href = $prevLink.attr('href');
+            }
+        }
+    });
+    $('.next_topre').on('click', function() {
+        if($(this).hasClass('off_topre')) {
+            return;
+        }
+        const $currentLi = $('.pager span.current').closest('li');
+        const $nextLi = $currentLi.next('li');
+        if($nextLi.length) {
+            const $nextLink = $nextLi.find('a');
+            if($nextLink.length) {
+                window.location.href = $nextLink.attr('href');
             }
         }
     });
