@@ -97,6 +97,18 @@ $(function() {
         }
     });
 
+    /* search-nav_topre */
+    const $keywordInput = $('input.searchKeywordInput');
+    const baseUrl = $('#searchUrlData').data('search-url');
+    $keywordInput.on('keypress', function(event) {
+        if(event.which === 13) {
+            event.preventDefault();
+            const keyword = $keywordInput.val();
+            let finalUrl = baseUrl + encodeURIComponent(keyword);
+            window.location.href = finalUrl;
+        }
+    });
+
     /* mv_topre */
     $('.mv_topre').slick({
         dots: true,
@@ -107,16 +119,24 @@ $(function() {
     });
 
     /* icon_topre */
-    // クリックする要素
     $('nav.icon_topre ul li').on('click', function() {
-        // スクロール先のh2要素
-        var targetH2 = $('h2:contains("目標のテキストのh2")'); // 特定のテキストを含むh2を探す
 
-        if (targetH2.length) { // 対象のh2が存在するか確認
-            // スクロールアニメーション
+        let spanText = $(this).find('span').text();
+        let targetSelector;
+        if(spanText === 'ランキング') {
+            targetSelector = 'section.ranking_topre';
+        } else if(spanText === '新商品') {
+            targetSelector = 'section.new_topre';
+        } else if(spanText === 'ポイントUP') {
+            targetSelector = 'section.recommend_topre';
+        } else {
+            return;
+        }
+        let target = $(targetSelector);
+        if(target.length) {
             $('html, body').animate({
-                scrollTop: targetH2.offset().top
-            }, 800); // 800ミリ秒でスクロール（速度は調整可能）
+                scrollTop: target.offset().top
+            }, 800);
         }
     });
 
@@ -124,13 +144,13 @@ $(function() {
     $('p.ranking-icon_topre img').each(function(index) {
         let srcToSet;
         if(index === 0) {
-            srcToSet = 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/ranking1-icon.svg'; // 1つ目のliの場合
+            srcToSet = 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/ranking1-icon.svg';
         } else if(index === 1) {
-            srcToSet = 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/ranking2-icon.svg'; // 2つ目のliの場合
+            srcToSet = 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/ranking2-icon.svg';
         } else if(index === 2) {
-            srcToSet = 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/ranking3-icon.svg'; // 3つ目のliの場合
+            srcToSet = 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/ranking3-icon.svg';
         } else {
-            srcToSet = 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/ranking4-icon.svg'; // 4つ目以降のliの場合
+            srcToSet = 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/ranking4-icon.svg';
         }
         $(this).attr('src', srcToSet);
     });
@@ -164,6 +184,32 @@ $(function() {
         if(originalText.length > maxLength) {
             const truncatedText = originalText.slice(0, maxLength) + '...';
             $p.text(truncatedText);
+        }
+    });
+
+    /* list-head-sort_topre */
+    const urlParams = new URLSearchParams(window.location.search);
+    const sortParam = urlParams.get('sort');
+    $('.category-title dl.list-head-sort dd a').each(function() {
+        const $link = $(this);
+        const linkText = $link.text();
+        $link.parents('dd').removeClass('select_topre');
+        if(sortParam === 'price') {
+            if(linkText === '価格の低い順') {
+                $link.parents('dd').addClass('select_topre');
+            }
+        } else if(sortParam === 'price_high') {
+            if(linkText === '価格の高い順') {
+                $link.parents('dd').addClass('select_topre');
+            }
+        } else if(sortParam === 'order') {
+            if(linkText === '新着順') {
+                $link.parents('dd').addClass('select_topre');
+            }
+        } else {
+            if(linkText === 'おすすめ順') {
+                $link.parents('dd').addClass('select_topre');
+            }
         }
     });
 });

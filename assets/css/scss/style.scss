@@ -71,7 +71,7 @@ html {
                 }
             }
 
-            nav {
+            nav.icon_topre {
                 padding: 0 16px;
                 margin-top: 24px;
                 white-space: nowrap;
@@ -104,6 +104,24 @@ html {
                                 line-height: 100%;
                                 text-align: center;
                             }
+                        }
+
+                        img {
+                            display: block;
+                            width: 48px;
+                            height: 48px;
+                            margin: 0 auto;
+                        }
+
+                        span {
+                            margin-top: 8px;
+                            display: block;
+                            font-family: $font3;
+                            @include font-s;
+                            font-weight: 700;
+                            letter-spacing: 0;
+                            line-height: 100%;
+                            text-align: center;
                         }
                     }
                 }
@@ -760,5 +778,6 @@ html {
     }
 }
 
+@import './contents';
 @import './responsive/template';
 @import './responsive/style';
