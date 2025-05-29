@@ -1,0 +1,108 @@
+<{$module.meta_topre}>
+<{$makeshop.body_top}>
+
+    <{$module.header_topre}>
+    <{$module.drawer_topre}>
+    <div class="contents">
+        <div class="breadcrumb">
+            <span class="breadcrumb-item"><a href="<{$url.top}>">ホーム</a></span>
+            <span class="breadcrumb-item current">検索結果</span>
+        </div>
+        <div class="container">
+            <{$module.side}>
+            <main class="main">
+                <section class="main-section">
+                    <!--検索結果-->
+                    <div class="category-title">
+                        <h2>検索結果
+                        <span>
+                        <{if $search.keyword}>
+                            <{$search.keyword}>
+                        <{/if}>
+                        <{if $search.category.name}>
+                            <{$search.category.name}>
+                        <{/if}>
+                        <{if $search.price_low || $search.price_high}>
+                            <{if $search.price_low}><{$search.price_low}>円<{/if}>～<{if $search.price_high}><{$search.price_high}>円<{/if}>
+                        <{/if}>
+                        <{if $search.original_code}>
+                            <{$search.original_code}>
+                        <{/if}>
+                        </span>
+                        </h2>
+                        <dl class="list-head-sort">
+                            <dt>並べ替え：</dt>
+                            <dd><a href="<{$search.sort_low_price_url}>">価格の低い順</a></dd>
+                            <dd><a href="<{$search.sort_high_price_url}>">価格の高い順</a></dd>
+                            <dd><a href="<{$search.sort_recommend_url}>">おすすめ順</a></dd>
+                            <dd><a href="<{$search.sort_new_url}>">新着順</a></dd>
+                        </dl>
+                    </div>
+                    <!--検索アイテム-->
+                    <{if $search.item.has_item}>
+                    <ul class="item-list">
+                    <{section name=i loop=$search.item.list}>
+                        <li>
+                            <div class="item-icon">
+                            <{if $search.item.list[i].is_soldout}>
+                                <p class="item-soldout">SOLD OUT</p>
+                            <{/if}>
+                            </div>
+                            <div class="item-list-image">
+                                <a href="<{$search.item.list[i].url}>"><img src="<{$search.item.list[i].image_L}>" alt=""></a>
+                            </div>
+                            <!--アイコン表示-->
+                            <{if $search.item.list[i].icon.has_item}>
+                            <ul class="item-list-icon">
+                                <{section name=j loop=$search.item.list[i].icon.list}>
+                                <li><img src="<{$search.item.list[i].icon.list[j].image_url}>" alt=""></li>
+                                <{/section}>
+                            </ul>
+                            <{/if}>
+                            <{if $search.item.list[i].base_category.url}>
+                                <p class="item-category"><a href="<{$search.item.list[i].base_category.url}>"><{$search.item.list[i].base_category.name}></a></p>
+                            <{/if}>
+                            <p class="item-name"><a href="<{$search.item.list[i].url}>"><{$search.item.list[i].name}></a></p>
+                            <{if $search.item.list[i].is_sale}>
+                                <p class="price original-price">￥<{$search.item.list[i].original_price|number_format}><span>（税込）</span></p>
+                                <p class="price item-sale-price">￥<{$search.item.list[i].price|number_format}><span class="tax">（税込）</span>
+                                <span class="sale-discount-rate">[<{$search.item.list[i].sale_rate}>%OFF</span>]</p>
+                            <{else}>
+                                <p class="price">￥<{$search.item.list[i].price|number_format}><span>（税込）</span></p>
+                            <{/if}>
+                        </li>
+                    <{/section}>
+                    </ul>
+                    <!--ページャー-->
+                    <div class="pager-wrap">
+                        <p class="total-count">（全<span><{$search.total_count}></span>件）<{$search.display_count}>件表示</p>
+                        <{if $search.pager.has_item}>
+                        <ul class="pager">
+                            <{if !$search.pager.is_first_display}>
+                                <li><a href="<{$search.pager.first_url}>"><span class="prev">一番前へ</span></a></li>
+                            <{/if}>
+    
+                            <{section name=i loop=$search.pager.list}>
+                            <{if $search.pager.list[i].is_current_page}>
+                                <li><span class="current"><{$search.pager.list[i].number}></span></li>
+                            <{else}>
+                                <li><a href="<{$search.pager.list[i].url}>"><span><{$search.pager.list[i].number}></span></a></li>
+                            <{/if}>
+                            <{/section}>
+    
+                            <{if !$search.pager.is_last_display}>
+                                <li><a href="<{$search.pager.last_url}>"><span class="next">最後へ</span></a></li>
+                            <{/if}>
+                        </ul>
+                        <{/if}>
+                    </div>
+                    <{else}>
+                        <p class="empty">ご指定の条件に一致する商品が見つかりませんでした</p>
+                    <{/if}>
+                </section>
+            </main>
+        </div>
+    </div>
+    <{$module.footer_topre}>
+
+<{$makeshop.body_bottom}>

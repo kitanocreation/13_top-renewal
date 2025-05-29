@@ -2,10 +2,11 @@
     <!-- キタノセレクション -->
     <{$module.meta_topre}>
         <link rel="stylesheet" href="https://gigaplus.makeshop.jp/kitanoace/09_ks/assets/css/style31.css">
-        <style>html body .ks-fv .ks-fv_img{top:136px;}.header{z-index:4;}.header .postage p,#g-nav,.footer a,.footer p{font-size:13px;letter-spacing:0;}.nav-contact li{font-size:14px;}.nav-contact li,.gnav li a,.bnav li a,.bnav li p,.footer-nav li a,.footer-text span,.copyright{letter-spacing:0;}.footer-nav li{line-height:1.4;}.footer-nav li a{font-size:14px;}.sp-side-section,.search{width:77.5%;}.clearfix{position:relative;z-index:0;}@media screen and (min-width:768px){.curryBs-fv{padding-top:146.5px;}.curryBs_main a:hover{opacity:1;}header .bottom-nav{height:55px;}.bottom-nav{font-size:14px;letter-spacing:0;}}.ks-slideX-sp h3{white-space:break-spaces;}</style>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.js" defer></script>        
-        <script defer>(function(d) { var config = {kitId: 'wku2cgo', scriptTimeout: 3000, async: true}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);        (function(d) { var config = { kitId: 'zqp2ktf',scriptTimeout: 3000,async: true}, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
-        <script src="https://gigaplus.makeshop.jp/kitanoace/09_ks/assets/js/script7.js" defer></script>    
+        <script>(function(d){var config={kitId:'wku2cgo',scriptTimeout:3000,async:true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);(function(d){var config={kitId:'zqp2ktf',scriptTimeout:3000,async:true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
+        <style>@media screen and (max-width:768px){html body .ks_main .ks-ranking, html body .ks_main .ks-recommend{padding-bottom:0;}}@media screen and (min-width:768px){section.ks-items ul.item-list{justify-content:initial;}section.ks-items p.total-count{margin:40px 0 0 80px;}html body .ks-fv .ks-fv_img{top:112px !important;}html body .ks-fv .ks-fv-con{margin-top:calc((100vw - 160px) * 0.36 + 0px) !important;}}html body .ks-fv .ks-fv_img{top:136px;}.header{z-index:4;}.header .postage p,#g-nav,.footer a,.footer p{font-size:13px;letter-spacing:0;}.nav-contact li{font-size:14px;}.nav-contact li,.gnav li a,.bnav li a,.bnav li p,.footer-nav li a,.footer-text span,.copyright{letter-spacing:0;}.footer-nav li{line-height:1.4;}.footer-nav li a{font-size:14px;}.sp-side-section,.search{width:77.5%;}.clearfix{position:relative;z-index:0;}@media screen and (min-width:768px){.curryBs-fv{padding-top:146.5px;}.curryBs_main a:hover{opacity:1;}header .bottom-nav{height:55px;}.bottom-nav{font-size:14px;letter-spacing:0;}}.ks-slideX-sp h3{white-space:break-spaces;}</style>
+        <script src="https://gigaplus.makeshop.jp/kitanoace/09_ks/assets/js/script7.js" defer></script> 
+        <script src="<{$page.javascript}>" defer></script>   
+        <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.js" defer></script> -->
     <{$makeshop.body_top}>
 
         <{$module.header_topre}>
@@ -209,6 +210,7 @@
             <section class="ks-items">
                 <div class="category-title">
                     <h2>商品一覧</h2>
+                    <p class="total-count">全<span><{$category.total_count}></span>件 <{$category.display_count}>件表示</p>
                     <dl class="list-head-sort">
                         <dt>並べ替え：</dt>
                         <dd><a href="<{$category.sort_low_price_url}>">価格の低い順</a></dd>
@@ -221,67 +223,61 @@
                     <ul class="item-list">
                         <{section name=i loop=$category.item.list}>
                             <li>
-                                <div class="item-icon">
-                                    <{if $category.item.list[i].is_soldout}>
-                                        <p class="item-soldout">SOLD OUT</p>
-                                    <{/if}>
-                                </div>
-                                <div class="item-icon">
-                                    <{if $category.item.list[i].is_soldout}>
-                                    	<p class="item-soldout">SOLD OUT</p>
-                                    <{/if}>
-                                </div>
-                                <div class="item-list-image"><a href="<{$category.item.list[i].url}>"><img src="<{$category.item.list[i].image_L}>" alt=""></a></div>
-                                <!--アイコン表示-->
-                                <{if $category.item.list[i].icon.has_item}>
-                                	<ul class="item-list-icon">
-                                        <{section name=j loop=$category.item.list[i].icon.list}>
-                                            <li><img src="<{$category.item.list[i].icon.list[j].image_url}>" alt=""></li>
-                                        <{/section}>
-                                	</ul>
-                                <{/if}>
-                                <p class="item-name"><a href="<{$category.item.list[i].url}>"><{$category.item.list[i].name}></a></p>
-                                <{if $category.item.list[i].is_sale}>
-                                    <p class="price original-price">￥<{$category.item.list[i].original_price|number_format}><span>（税込）</span></p>
-                                    <p class="price item-sale-price">￥<{$category.item.list[i].price|number_format}><span class="tax">（税込）</span>
-                                    <span class="sale-discount-rate">[<{$category.item.list[i].sale_rate}>%OFF</span>]</p>
-                                <{else}>
-                                    <p class="price">￥<{$category.item.list[i].price|number_format}><span>（税込）</span></p>
-                                <{/if}>
-                                <{if $category.item.list[i].has_review}>
-                                    <div class="item-list-review">
-                                        <{$category.item.list[i].review.star_html}>
-                                        <p class="item-list-review-rate"><{$category.item.list[i].review.average}></p>
-                                        <p class="item-list-review-count">[<{$category.item.list[i].review.total_count}>件]</p>
+                                <a href="<{$category.item.list[i].url}>">
+                                    <div class="item-icon">
+                                        <{if $category.item.list[i].is_soldout}>
+                                            <p class="item-soldout">SOLD OUT</p>
+                                        <{/if}>
                                     </div>
-                                <{/if}>
+                                    <div class="item-list-image"><img src="<{$category.item.list[i].image_L}>" alt=""></div>
+                                    <{if $category.item.list[i].icon.has_item}>
+                                        <ul class="item-list-icon">
+                                            <{section name=j loop=$category.item.list[i].icon.list}>
+                                                <li><img src="<{$category.item.list[i].icon.list[j].image_url}>" alt=""></li>
+                                            <{/section}>
+                                        </ul>
+                                    <{/if}>
+                                    <{if $category.item.list[i].has_review}>
+                                        <div class="item-list-review">
+                                            <{$category.item.list[i].review.star_html}>
+                                            <p class="item-list-review-count">(<{$category.item.list[i].review.total_count}>)</p>
+                                        </div>
+                                    <{/if}>
+                                    <p class="item-name"><{$category.item.list[i].name}></p>
+                                    <div class="con_topre">
+                                        <div class="text_topre">
+                                            <{if $category.item.list[i].is_sale}>
+                                                <p class="price original-price">税込<span><{$category.item.list[i].original_price|number_format}></span>円</p>
+                                                <p class="price item-sale-price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
+                                                <p class="sale-discount-rate">[<{$category.item.list[i].sale_rate}>%OFF]</p>
+                                            <{else}>
+                                                <p class="price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
+                                            <{/if}>
+                                        </div>
+                                        <div class="favorite_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></div>
+                                    </div>
+                                </a>
                             </li>
                         <{/section}>
                     </ul>
-                    <div class="pager-wrap">
-                        <p class="total-count">（全<span><{$category.total_count}></span>件）<{$category.display_count}>件表示</p>
-                        <{if $category.pager.has_item}>
-                            <ul class="pager">
-                                <{if !$category.pager.is_first_display}>
-                                    <li><a href="<{$category.pager.first_url}>"><span class="prev">一番前へ</span></a></li>
-                                <{/if}>
-                                <{section name=i loop=$category.pager.list}>
-                                <{if $category.pager.list[i].is_current_page}>
-                                    <li><span class="current"><{$category.pager.list[i].number}></span></li>
-                                <{else}>
-                                    <li><a href="<{$category.pager.list[i].url}>"><span><{$category.pager.list[i].number}></span></a></li>
-                                <{/if}>
-                                <{/section}>
-                                <{if !$category.pager.is_last_display}>
-                                    <li><a href="<{$category.pager.last_url}>"><span class="next">最後へ</span></a></li>
-                                <{/if}>
-                            </ul>
+                        <div class="pager-wrap">
+                            <{if $category.pager.has_item}>
+                                <ul class="pager">
+                                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/prev-icon-re_topre.svg" alt="" class="prev_topre off_topre">
+                                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/next-icon.svg" alt="" class="next_topre">
+                                    <{section name=i loop=$category.pager.list}>
+                                        <{if $category.pager.list[i].is_current_page}>
+                                            <li><span class="current"><{$category.pager.list[i].number}></span></li>
+                                        <{else}>
+                                            <li><a href="<{$category.pager.list[i].url}>"><span><{$category.pager.list[i].number}></span></a></li>
+                                        <{/if}>
+                                    <{/section}>
+                                </ul>
+                            <{/if}>
+                        </div>
+                        <{else}>
+                            <p class="empty">このカテゴリーには商品がありません</p>
                         <{/if}>
-                    </div>
-                <{else}>
-                    <p class="empty">このカテゴリーには商品がありません</p>
-                <{/if}>
-            </section>
         <{$module.footer_topre}>
 
     <{$makeshop.body_bottom}>

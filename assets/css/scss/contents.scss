@@ -314,11 +314,132 @@
                             margin: 0 0 0 16px;
                         }
 
-                        li:nth-of-type(5n) {
+                        li:nth-of-type(4n+1) {
                             margin: 40px 0 0 0;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+section.ks-items {
+
+    dl.list-head-sort {
+        display: none;
+    }
+
+    p.total-count {
+        margin: 40px 0 0 16px;
+        font-size: 12px;
+
+        span {
+            font-family: $font2;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    ul.item-list {
+        width: calc(100vw - 32px);
+        margin: 40px auto 0 auto;
+        justify-content: space-between;
+
+        li {
+            width: calc((100% - 16px) / 2);
+            margin: 40px 0 0 16px;
+
+            .item-list-review {
+                margin-top: 8px;
+            }
+
+            p.item-name {
+                margin-top: 4px;
+                font-weight: 700;
+            }
+
+            .con_topre {
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+
+                .text_topre {
+
+                    p {
+                        font-size: 12px;
+
+                        span {
+                            font-size: 16px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    p.sale-discount-rate {
+                        color: $red !important;
+                    }
+                }
+
+                .favorite_topre {
+                    width: 40px;
+                    height: 40px;
+                    border: solid 1px #757578;
+                    border-radius: 50%;
+                    margin-top: 8px;
+                    @include center;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        li:nth-of-type(odd) {
+            margin: 40px 0 0 0;
+        }
+
+        li:nth-of-type(1) {
+            margin: 0 0 0 0;
+        }
+
+        li:nth-of-type(2) {
+            margin: 0 0 0 16px;
+        }
+    }
+
+    .pager-wrap {
+        width: fit-content !important;
+        margin: 48px auto 0 auto !important;
+
+        ul.pager {
+            position: relative;
+
+            img.prev_topre, img.next_topre {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 50%;
+            }
+
+            img.prev_topre {
+                left: -24px;
+                transform: translate(-100%, -50%);
+            }
+
+            img.next_topre {
+                right: -24px;
+                transform: translate(100%, -50%);
+            }
+
+            img.off_topre {
+                opacity: .5;
+            }
+
+            li:nth-last-of-type(1) {
+                width: 24px;
             }
         }
     }
