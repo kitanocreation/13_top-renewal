@@ -242,6 +242,11 @@ nav.drawer_topre {
                     right: 22.5px;
                     transform: translateY(-50%);
                 }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                }
             }
 
             ul.small_topre {

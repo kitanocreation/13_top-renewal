@@ -272,14 +272,14 @@ button {
   .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(odd) {
     margin: 40px 0 0 16px;
   }
-  .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(1) {
-    margin: 0 0 0 0;
-  }
   .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(2), .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(3), .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(4) {
     margin: 0 0 0 16px;
   }
   .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(4n+1) {
     margin: 40px 0 0 0;
+  }
+  .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(1) {
+    margin: 0 0 0 0 !important;
   }
 }
 section.ks-items dl.list-head-sort {

@@ -296,6 +296,10 @@ nav.drawer_topre ul.category_topre li .large_topre span:nth-of-type(2) {
   right: 22.5px;
   transform: translateY(-50%);
 }
+nav.drawer_topre ul.category_topre li .large_topre a {
+  display: flex;
+  align-items: center;
+}
 nav.drawer_topre ul.category_topre li ul.small_topre {
   display: none;
 }
@@ -440,15 +444,15 @@ footer.top_topre small {
 }
 
 html body .fv_topre {
-  width: 375px;
+  width: 100vw;
 }
 html body .fv_topre .mv_topre {
-  height: 375px;
+  height: 100vw;
 }
 html body .fv_topre .mv_topre button.slick-prev, html body .fv_topre .mv_topre button.slick-next {
   width: 24px;
   height: 24px;
-  top: 375px;
+  top: 100vw;
   transform: rotate(0);
 }
 html body .fv_topre .mv_topre button.slick-prev::before, html body .fv_topre .mv_topre button.slick-next::before {
@@ -462,14 +466,14 @@ html body .fv_topre .mv_topre button.slick-prev::before, html body .fv_topre .mv
   opacity: 1;
 }
 html body .fv_topre .mv_topre button.slick-prev {
-  left: 58.5px;
+  left: 25px;
 }
 html body .fv_topre .mv_topre button.slick-prev::before {
   border-right: none;
   background-image: url("https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/mv/prev-icon.svg");
 }
 html body .fv_topre .mv_topre button.slick-next {
-  right: 58.5px;
+  right: 25px;
 }
 html body .fv_topre .mv_topre button.slick-next::before {
   border-left: none;
@@ -507,6 +511,7 @@ html body .fv_topre nav.icon_topre ul {
 html body .fv_topre nav.icon_topre ul li {
   width: 80px;
   height: 88px;
+  margin-left: 4px;
 }
 html body .fv_topre nav.icon_topre ul li a img {
   display: block;
@@ -539,6 +544,9 @@ html body .fv_topre nav.icon_topre ul li span {
   letter-spacing: 0;
   line-height: 100%;
   text-align: center;
+}
+html body .fv_topre nav.icon_topre ul li:nth-of-type(1) {
+  margin-left: 0;
 }
 html body main.top_topre {
   margin-top: 16px;
@@ -688,7 +696,7 @@ html body main.top_topre section.ranking_topre ul li a.image_topre {
   height: calc((100vw - 32px - 16px) / 2);
 }
 html body main.top_topre section.ranking_topre ul li a.image_topre img {
-  height: 100%;
+  height: initial;
 }
 html body main.top_topre section.ranking_topre ul li ul.icon_topre {
   height: 17.5px;
@@ -771,7 +779,7 @@ html body main.top_topre section.new_topre ul li a.image_topre, html body main.t
   height: calc((100vw - 32px - 24px) / 2);
 }
 html body main.top_topre section.new_topre ul li a.image_topre img, html body main.top_topre section.recommend_topre ul li a.image_topre img, html body main.top_topre section.check_topre ul li a.image_topre img {
-  height: 100%;
+  height: initial;
 }
 html body main.top_topre section.new_topre ul li ul.icon_topre, html body main.top_topre section.recommend_topre ul li ul.icon_topre, html body main.top_topre section.check_topre ul li ul.icon_topre {
   height: 17.5px;
@@ -1325,14 +1333,14 @@ button {
   .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(odd) {
     margin: 40px 0 0 16px;
   }
-  .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(1) {
-    margin: 0 0 0 0;
-  }
   .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(2), .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(3), .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(4) {
     margin: 0 0 0 16px;
   }
   .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(4n+1) {
     margin: 40px 0 0 0;
+  }
+  .category_topre .container main.main section.main-section ul.item-list li:nth-of-type(1) {
+    margin: 0 0 0 0 !important;
   }
 }
 section.ks-items dl.list-head-sort {
@@ -1955,13 +1963,13 @@ button {
     top: 50vw !important;
   }
   html body .fv_topre .mv_topre button.slick-prev {
-    left: 500px !important;
+    left: 400px !important;
   }
   html body .fv_topre .mv_topre button.slick-prev::before {
     background-image: url("https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/mv/prev-icon.svg");
   }
   html body .fv_topre .mv_topre button.slick-next {
-    right: 500px !important;
+    right: 400px !important;
   }
   html body .fv_topre .mv_topre button.slick-next::before {
     background-image: url("https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/mv/next-icon.svg");
