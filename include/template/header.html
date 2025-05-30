@@ -292,16 +292,8 @@
                 </ul>
             </nav>
             <nav class="search-nav_topre pc_topre">
-                <div class="category_topre">
-                    <select data-id="<{$search_form.category_id}>">
-                        <{section name=i loop=$search_form.category_list}>
-                            <option value="<{$search_form.category_list[i].code}>" <{if $search.category.code == $search_form.category_list[i].code}>selected<{/if}>><{$search_form.category_list[i].name}></option>
-                        <{/section}>
-                    </select>
-                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/down-icon.svg" alt="">
-                </div>
                 <div class="keyword_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt=""><input type="text" data-id="<{$search_form.keyword_id}>" value="<{$search.keyword}>" placeholder="キーワードを入力" class="searchKeywordInput"></div>
-                <div id="searchUrlData" data-search-url="<{$search_form.search_url}>"></div>
+                <button><a href="<{$search_form.search_url}>" class="search-btn drawer-search-btn"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt="">検索</a></button>
             </nav>
             <nav class="mnav_topre">
                 <ul>
@@ -314,16 +306,8 @@
         </div>
     </div>
     <nav class="search-nav_topre sp_topre">
-        <div class="category_topre">
-            <select data-id="<{$search_form.category_id}>">
-                <{section name=i loop=$search_form.category_list}>
-                    <option value="<{$search_form.category_list[i].code}>" <{if $search.category.code == $search_form.category_list[i].code}>selected<{/if}>><{$search_form.category_list[i].name}></option>
-                <{/section}>
-            </select>
-            <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/down-icon.svg" alt="">
-        </div>
         <div class="keyword_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt=""><input type="text" data-id="<{$search_form.keyword_id}>" value="<{$search.keyword}>" placeholder="キーワードを入力" class="searchKeywordInput"></div>
-        <div id="searchUrlData" data-search-url="<{$search_form.search_url}>"></div>
+        <button><a href="<{$search_form.search_url}>" class="search-btn drawer-search-btn"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt="">検索</a></button>
     </nav>
 </header>
 <header class="down_topre close_topre">
@@ -619,16 +603,8 @@
                 </ul>
             </nav>
             <nav class="search-nav_topre pc_topre">
-                <div class="category_topre">
-                    <select data-id="<{$search_form.category_id}>">
-                        <{section name=i loop=$search_form.category_list}>
-                            <option value="<{$search_form.category_list[i].code}>" <{if $search.category.code == $search_form.category_list[i].code}>selected<{/if}>><{$search_form.category_list[i].name}></option>
-                        <{/section}>
-                    </select>
-                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/down-icon.svg" alt="">
-                </div>
                 <div class="keyword_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt=""><input type="text" data-id="<{$search_form.keyword_id}>" value="<{$search.keyword}>" placeholder="キーワードを入力" class="searchKeywordInput"></div>
-                <div id="searchUrlData" data-search-url="<{$search_form.search_url}>"></div>
+                <button><a href="<{$search_form.search_url}>" class="search-btn drawer-search-btn"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt="">検索</a></button>
             </nav>
             <nav class="mnav_topre">
                 <ul>
@@ -641,15 +617,7 @@
         </div>
     </div>
     <nav class="search-nav_topre sp_topre">
-        <div class="category_topre">
-            <select data-id="<{$search_form.category_id}>">
-                <{section name=i loop=$search_form.category_list}>
-                    <option value="<{$search_form.category_list[i].code}>" <{if $search.category.code == $search_form.category_list[i].code}>selected<{/if}>><{$search_form.category_list[i].name}></option>
-                <{/section}>
-            </select>
-            <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/down-icon.svg" alt="">
-        </div>
         <div class="keyword_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt=""><input type="text" data-id="<{$search_form.keyword_id}>" value="<{$search.keyword}>" placeholder="キーワードを入力" class="searchKeywordInput"></div>
-        <div id="searchUrlData" data-search-url="<{$search_form.search_url}>"></div>
+        <button><a href="<{$search_form.search_url}>" class="search-btn drawer-search-btn"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt="">検索</a></button>
     </nav>
 </header>

@@ -254,7 +254,10 @@
                                                 <p class="price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
                                             <{/if}>
                                         </div>
-                                        <div class="favorite_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></div>
+                                        <div class="favorite_topre">
+                                            <a href="<{$category.item.list[i].favorite_entry_url}>" class="favorite-icon favorite-off <{if $category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                            <a href="<{$category.item.list[i].favorite_remove_url}>" class="favorite-icon favorite-on <{if !$category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                        </div>
                                     </div>
                                 </a>
                             </li>
@@ -635,7 +638,10 @@
                                                     <p class="price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
                                                 <{/if}>
                                             </div>
-                                            <div class="favorite_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></div>
+                                            <div class="favorite_topre">
+                                                <a href="<{$category.item.list[i].favorite_entry_url}>" class="favorite-icon favorite-off <{if $category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                <a href="<{$category.item.list[i].favorite_remove_url}>" class="favorite-icon favorite-on <{if !$category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                            </div>
                                         </div>
                                     </a>
                                 </li>

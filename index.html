@@ -176,7 +176,7 @@
                     </li>
                 <{/section}>
             </ul>
-            <button><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/plus-icon.svg" alt="">もっと見る</button>
+            <button><span>&plus;</span>もっと見る</button>
         </section>
         <section class="recommend_topre">
             <h2>今月のおすすめ</h2>
@@ -215,7 +215,7 @@
                     </li>
                 <{/section}>
             </ul>
-            <button><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/plus-icon.svg" alt="">もっと見る</button>
+            <button><span>&plus;</span>もっと見る</button>
         </section>
         <section class="review_topre">
             <h2>新着レビュー</h2>
@@ -238,7 +238,7 @@
                     </li>
                 <{/section}>
             </ul>
-            <button><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/plus-icon.svg" alt="">もっと見る</button>
+            <button><span>&plus;</span>もっと見る</button>
         </section>
         <section class="check_topre">
             <h2>最近チェックした商品</h2>
@@ -277,18 +277,12 @@
                     </li>
                 <{/section}>
             </ul>
-            <button><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/plus-icon.svg" alt="">もっと見る</button>
+            <button><span>&plus;</span>もっと見る</button>
         </section>
         <section class="search_topre">
             <nav class="search-nav_topre">
-                <div class="category_topre">
-                    <select data-id="<{$search_form.category_id}>">
-                        <{section name=i loop=$search_form.category_list}>
-                            <option value="<{$search_form.category_list[i].code}>" <{if $search.category.code == $search_form.category_list[i].code}>selected<{/if}>><{$search_form.category_list[i].name}></option>
-                        <{/section}>
-                    </select>
-                </div>
                 <div class="keyword_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt=""><input type="text" data-id="<{$search_form.keyword_id}>" value="<{$search.keyword}>" placeholder="キーワードを入力" class="searchKeywordInput"></div>
+                <button><a href="<{$search_form.search_url}>" class="search-btn drawer-search-btn"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/search-icon.svg" alt="">検索</a></button>
             </nav>
             <h3>人気ワード</h3>
             <{$module.tag_topre}>

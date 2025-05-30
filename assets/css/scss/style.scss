@@ -148,10 +148,6 @@ html {
                         display: block;
                     }
                 }
-
-                button.open_topre {
-                    display: none;
-                }
             }
 
             section.lp_topre {
@@ -496,10 +492,12 @@ html {
                     font-weight: 700;
                     letter-spacing: 0;
 
-                    img {
-                        width: 20px;
-                        height: 20px;
+                    span {
+                        display: block;
                         margin-right: 8px;
+                        font-size: 20px;
+                        line-height: 100%;
+                        transform: translateY(-1px);
                     }
                 }
             }
@@ -607,10 +605,12 @@ html {
                     font-weight: 700;
                     letter-spacing: 0;
 
-                    img {
-                        width: 20px;
-                        height: 20px;
+                    span {
+                        display: block;
                         margin-right: 8px;
+                        font-size: 20px;
+                        line-height: 100%;
+                        transform: translateY(-1px);
                     }
                 }
             }
@@ -680,33 +680,11 @@ html {
                     display: flex;
                     justify-content: space-between;
 
-                    .category_topre {
-                        width: 26.7vw;
-                        height: 36px;
-                        border-radius: 4px;
-                        background-color: $grey;
-                        margin-top: 8px;
-                        @include center;
-
-                        select {
-                            width: 65px;
-                            background-color: transparent;
-                            @include font-s;
-                            line-height: 100%;
-                        }
-
-                        img {
-                            width: 24px;
-                            height: 24px;
-                        }
-                    }
-
                     .keyword_topre {
-                        width: 62.1vw;
+                        width: 68vw;
                         height: 36px;
                         border-radius: 4px;
                         background-color: $grey;
-                        margin-top: 8px;
                         @include center;
 
                         img {
@@ -725,6 +703,25 @@ html {
                             align-items: center;
                         }
                     }
+
+                    button {
+                        width: 21.3vw;
+                        height: 36px;
+                        border: solid 1px $black;
+                        border-radius: 50px;
+                        background-color: transparent;
+
+                        a {
+                            @include center;
+                            font-family: $font3;
+                            @include font-s;
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
                 }
 
                 h3 {
@@ -735,11 +732,12 @@ html {
                 }
 
                 nav.tag-nav_topre {
-                    margin-top: 8px;
+                    width: calc(100% - 32px);
+                    margin: 8px auto 0 auto;
 
                     ul {
                         display: flex;
-                        justify-content: center;
+                        justify-content: space-between;
 
                         li {
                             margin-left: 8px;

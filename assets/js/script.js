@@ -84,7 +84,7 @@ $(function() {
         }
     });
     $('ul.category_topre li').on('click', function() {
-        if ($(this).hasClass('open_topre')) {
+        if($(this).hasClass('open_topre')) {
             $(this).removeClass('open_topre');
             $(this).find('.large_topre span:eq(1)').text('+');
         } else {
@@ -98,22 +98,9 @@ $(function() {
     });
 
     /* search-nav_topre */
-    const $keywordInput = $('input.searchKeywordInput');
-    const baseUrl = $('#searchUrlData').data('search-url');
-    $keywordInput.on('keypress', function(event) {
-        if(event.which === 13) {
-            event.preventDefault();
-            const keyword = $keywordInput.val();
-            let finalUrl = baseUrl + encodeURIComponent(keyword);
-            window.location.href = finalUrl;
-        }
-    });
-    $keywordInput.on('search', function(event) {
-        const keyword = $keywordInput.val();
-        if(keyword) {
-            let finalUrl = baseUrl + encodeURIComponent(keyword);
-            window.location.href = finalUrl;
-        }
+    $('.searchKeywordInput').on('input', function() {
+        const keyword = $(this).val();
+        $('.searchKeywordInput').val(keyword);
     });
 
     /* mv_topre */
@@ -164,14 +151,25 @@ $(function() {
 
     /*  */
     $('main.top_topre button').on('click', function() {
-        if($('main.top_topre ul').hasClass('open_topre')) {
-            $('main.top_topre ul').removeClass('open_topre');
-            $('main.top_topre button').removeClass('open_topre');
-            $(this).parents('section').find('ul').addClass('open_topre');
-            $(this).parents('section').find('button').addClass('open_topre');
+        const $targetButton = $(this).parents('section').find('button');
+        const $targetUl = $(this).parents('section').find('ul');
+        const openHtml = '<span>&minus;</span>閉じる';
+        const closeHtml = '<span>&plus;</span>もっと見る';
+        if($targetButton.hasClass('open_topre')) {
+            $targetUl.removeClass('open_topre');
+            $targetButton.removeClass('open_topre');
+            $targetButton.html(closeHtml);
         } else {
-            $(this).parents('section').find('ul').addClass('open_topre');
-            $(this).parents('section').find('button').addClass('open_topre');
+            $('main.top_topre ul.open_topre').removeClass('open_topre');
+            $('main.top_topre button.open_topre').each(function() {
+                if($(this)[0] !== $targetButton[0]) {
+                    $(this).removeClass('open_topre');
+                    $(this).html(closeHtml);
+                }
+            });
+            $targetUl.addClass('open_topre');
+            $targetButton.addClass('open_topre');
+            $targetButton.html(openHtml);
         }
     });
     $('button.next-icon_topre').on('click', function() {
@@ -181,7 +179,7 @@ $(function() {
         if($(this).parents('section').hasClass('active_topre')) {
             $(this).parents('section').removeClass('active_topre');
         }
-    });
+    });      
 
     /* review_topre */
     $('section.review_topre ul li a .con_topre p').each(function() {

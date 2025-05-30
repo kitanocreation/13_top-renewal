@@ -380,15 +380,16 @@
 
                     nav.search-nav_topre {
                         width: 343px;
+                        justify-content: center;
 
-                        .category_topre {
-                            width: 100px;
+                        .keyword_topre {
+                            width: 255px;
                             margin-top: 0;
                         }
 
-                        .keyword_topre {
-                            width: 233px;
-                            margin-top: 0;
+                        button {
+                            width: 80px;
+                            margin-left: 8px;
                         }
                     }
 
@@ -397,8 +398,10 @@
                     }
 
                     nav.tag-nav_topre {
+                        width: auto;
 
                         ul {
+                            justify-content: center;
 
                             li {
 

@@ -122,7 +122,7 @@
     }
 }
 
-.category_topre {
+.category_topre, .search_topre {
     padding: 0 0 0 0;
     margin-top: 19px;
 
@@ -204,10 +204,18 @@
                                 margin-top: 8px;
                                 @include center;
 
-                                img {
-                                    width: 24px;
-                                    height: 24px;
-                                    margin-bottom: 0;
+                                a:nth-of-type(1) {
+                                    display: none;
+                                }
+
+                                a.hide {
+                                    display: none;
+
+                                    img {
+                                        width: 24px;
+                                        height: 24px;
+                                        margin-bottom: 0;
+                                    }
                                 }
                             }
                         }
@@ -277,7 +285,7 @@
         }
     }
 
-    .category_topre {
+    .category_topre, .search_topre {
 
         .container {
             margin-top: 17.5px;
