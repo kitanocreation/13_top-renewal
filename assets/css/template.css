@@ -431,6 +431,9 @@ button {
   footer.top_topre .container_topre .sns-nav_topre {
     margin: 0 0 0 0;
   }
+  footer.top_topre .container_topre .sns-nav_topre ul {
+    justify-content: initial;
+  }
   footer.top_topre .container_topre .info-nav_topre {
     margin: 24px 0 0 0;
   }

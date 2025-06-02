@@ -10,3 +10,10 @@ $(function() {
         }
     });
 });
+
+$(function() {
+
+    $('button.remodal-close').on('click', function() {
+        $('.remodal-wrapper.makeshop-modal.remodal-is-opened').css('display, none');
+    });
+});

@@ -1,6 +1,6 @@
 <{$module.meta_topre}>
     <link rel="stylesheet" href="https://gigaplus.makeshop.jp/kitanoace/css/plugin/xzoom.css">
-    <style>h1.item-name_topre{font-size:28px;}h3.item-new{font-size:24px;}@media screen and (min-width:768px){h1.item-name_topre{font-size:32px;}}</style>
+    <style>h1.item-name_topre{font-size:28px;}h3.item-new{font-size:18px;}@media screen and (min-width:768px){h1.item-name_topre{font-size:32px;}}</style>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
@@ -114,11 +114,11 @@
                         <{if $item.subscription_discount.has_item}>
                             <!--回数割引を設定している場合-->
                             <{section name=i loop=$item.subscription_discount.list}>
-                                <p class="product-price-block subscription-time"><small><{$item.subscription_discount.list[i].times}>回目価格：</small>￥<{$item.subscription_discount.list[i].price|number_format}></p>
+                                <p class="product-price-block subscription-time"><small><{$item.subscription_discount.list[i].times}>回目価格：</small><{$item.subscription_discount.list[i].price|number_format}></p>
                             <{/section}>
                         <{else}>
                             <div class="item-price-wrap">
-                                <p class="item-price"><span>定期購入価格</span>￥<{$item.subscription_price_html}></p>
+                                <p class="item-price"><span>定期購入価格</span><{$item.subscription_price_html}></p>
                             </div>
                         <{/if}>
                         <{if $item.subscription_gift.has_item}>
@@ -134,9 +134,9 @@
                         <!--通常商品と定期購入の場合-->
                         <!--セールかどうか（通常商品のみ）-->
                         <{if $item.is_sale}>
-                            <p class="sale-text"><span class="original">￥<{$item.original_price|number_format}></span><span class="sale-rate">[<{$item.sale_rate}>％OFF]</span><span class="sale-price">￥<{$item.price_html}><span class="item-tax">（税込）</span></span></p>
+                            <p class="sale-text"><span class="original"><{$item.original_price|number_format}></span><span class="sale-rate">[<{$item.sale_rate}>％OFF]</span><span class="price1_topre">税込</span><span class="sale-price price2_topre"><{$item.price_html}><span class="item-tax price1_topre">円</span></span></p>
                             <{if $item.fixed_price}>
-                                <p class="fixed-price">通常販売価格：<span>￥<{$item.fixed_price|number_format}></span></p>
+                                <p class="fixed-price">通常販売価格：<span><{$item.fixed_price|number_format}></span></p>
                             <{/if}>
                             <{if $item.has_sale_period}>
                                 <p class="sale-priod ">【早期予約割引期間：
@@ -150,16 +150,16 @@
                                 </p>
                             <{/if}>
                         <{else}>
-                            <div class="product-price-block">￥<{$item.price_html}><small>（税込）</small></div>
+                            <div class="product-price-block"><span class="price1_topre">税込</span><span class="price2_topre"><{$item.price_html}></span><span class="price1_topre">円</span></div>
                         <{/if}>
                         <!--定期購入商品-->
-                        <p class="subscription-price">￥<{$item.subscription_price_html}><small>（定期購入時）</small></p>
+                        <p class="subscription-price"><{$item.subscription_price_html}><small>（定期購入時）</small></p>
                     <{/if}>
                 <{else}>
                     <{if $item.is_sale}>
-                        <p class="sale-text"><span class="original">￥<{$item.original_price|number_format}></span><span class="sale-rate">[<{$item.sale_rate}>％OFF]</span><span class="sale-price">￥<{$item.price_html}><span class="item-tax">（税込）</span></span></p>
+                        <p class="sale-text"><span class="original"><{$item.original_price|number_format}></span><span class="sale-rate">[<{$item.sale_rate}>％OFF]</span><span class="price1_topre">税込</span><span class="sale-price price2_topre"><{$item.price_html}><span class="item-tax price1_topre">円</span></span></p>
                         <{if $item.fixed_price}>
-                            <p class="fixed-price">通常販売価格：<span>￥<{$item.fixed_price|number_format}></span></p>
+                            <p class="fixed-price">通常販売価格：<span><{$item.fixed_price|number_format}></span></p>
                         <{/if}>
                         <{if $item.has_sale_period}>
                             <p class="sale-priod">【早期予約割引期間：
@@ -174,14 +174,14 @@
                             </p>
                         <{/if}>
                     <{else}>
-                        <{if $item.is_member_price}><p class="member-original-price">通常価格<span>￥<{$item.original_price|number_format}></span>（税込）</p><{/if}>
+                        <{if $item.is_member_price}><p class="member-original-price">通常価格<span><{$item.original_price|number_format}></span><span class="price1_topre">円</span></p><{/if}>
                         <{if $item.fixed_price}>
-                            <p class="fixed-price">通常販売価格：<span>￥<{$item.fixed_price|number_format}></span></p>
+                            <p class="fixed-price">通常販売価格：<span><{$item.fixed_price|number_format}></span></p>
                         <{/if}>
                        	<{if $item.base_category.code == 'ct172'}><!-- 大感謝祭のカテゴリのIDを指定 -->
-                            <p class="item-price sale-price">￥<{$item.price_html}><span class="item-tax">（税込）</span></p>
+                            <p class="item-price sale-price"><span class="price1_topre">税込</span><span class="price2_topre"><{$item.price_html}></span><span class="price1_topre">円</span></p>
                             <{else}>
-                                <p class="item-price">￥<{$item.price_html}><span class="item-tax">（税込）</span></p>
+                                <p class="item-price"><span class="price1_topre">税込</span><span class="price2_topre"><{$item.price_html}></span><span class="price1_topre">円</span></p>
                         <{/if}>
                     <{/if}>
                 <{/if}>
@@ -241,12 +241,18 @@
                         <{if $item.is_restock_enabled}>
                             <div class="favorite-wrap">
                                 <div><a href="<{$item.restock_url}>" class="restock-btn btn">再入荷お知らせ</a></div>
-                                <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                <div class="favorite_topre">
+                                    <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                    <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                </div>
                             </div>
                         <{else}>
                             <div class="favorite-wrap">
                                 <div class="disabled-btn btn">売り切れ</div>
-                                <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                <div class="favorite_topre">
+                                    <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                    <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                </div>
                             </div>
                         <{/if}>
                     <{else}>
@@ -294,7 +300,10 @@
                                                     <{if $item.option_sku.list[i].is_soldout}>
                                                         <div class="favorite-wrap">
                                                             <div class="disabled-btn btn sku-btn">売り切れ</div>
-                                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                                            <div class="favorite_topre">
+                                                                <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                                <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                                            </div>
                                                         </div>
                                                     <{else}>
                                                         <{if $item.option_sku.list[i].is_stock_unlimited}>
@@ -308,14 +317,20 @@
                                                         <{/if}>
                                                         <div class="modal-open">
                                                             <a href="<{$item.option_sku.list[i].cart_entry_subscription_url}>" class="subscription-only subscription-btn btn sku-btn">定期購入する</a>
-                                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                                            <div class="favorite_topre">
+                                                                <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                                <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                                            </div>
                                                         </div>
                                                     <{/if}>
                                                 <{elseif $item.is_subscription}>
                                                     <{if $item.option_sku.list[i].is_soldout}>
                                                         <div class="favorite-wrap">
                                                             <div class="disabled-btn btn sku-btn">売り切れ</div>
-                                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                                            <div class="favorite_topre">
+                                                                <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                                <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                                            </div>
                                                         </div>
                                                     <{else}>
                                                         <{if $item.option_sku.list[i].is_stock_unlimited}>
@@ -329,26 +344,38 @@
                                                         <{/if}>
                                                         <div class="modal-open">
                                                             <a href="<{$item.option_sku.list[i].cart_entry_url}>" class="add-cart-btn btn sku-btn"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/addcart-icon.svg" alt="">カートに入れる</a>
-                                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                                            <div class="favorite_topre">
+                                                                <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                                <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                                            </div>
                                                         </div>
                                                         <div class="modal-open">
                                                             <a href="<{$item.option_sku.list[i].cart_entry_subscription_url}>" class="subscription-btn btn sku-btn">定期購入する</a>
-                                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                                            <div class="favorite_topre">
+                                                                <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                                <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                                            </div>
                                                         </div>
                                                     <{/if}>
                                                 <{else}>
                                                     <div class="sku-price-wrap">
-                                                    <p class="price">￥<{$item.option_sku.list[i].price|number_format}><span>（税込）</span></p>
+                                                    <p class="price"><{$item.option_sku.list[i].price|number_format}><span class="price1_topre">円</span></p>
                                                     <{if $item.option_sku.list[i].is_soldout}>
                                                         <{if $item.is_restock_enabled}>
                                                             <div class="favorite-wrap">
                                                                 <div><a href="<{$item.option_sku.list[i].restock_url}>" class="restock-btn btn sku-btn">再入荷お知らせ</a></div>
-                                                                <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                                                <div class="favorite_topre">
+                                                                    <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                                    <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                                                </div>
                                                             </div>
                                                         <{else}>
                                                             <div class="favorite-wrap">
                                                                 <div class="disabled-btn btn sku-btn">売り切れ</div>
-                                                                <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                                                <div class="favorite_topre">
+                                                                    <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                                    <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                                                </div>
                                                             </div>
                                                         <{/if}>
                                                     <{else}>
@@ -364,7 +391,10 @@
                                                     </div>
                                                         <div class="modal-open">
                                                             <a href="<{$item.option_sku.list[i].cart_entry_url}>" class="add-cart-btn btn cart-order-btn sku-btn" data-button-id="cart-order"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/addcart-icon.svg" alt="">カートに入れる</a>
-                                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                                                <div class="favorite_topre">
+                                                                    <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                                    <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                                                </div>
                                                         </div>
                                                     <{/if}>
                                                 <{/if}>
@@ -380,18 +410,27 @@
                                     <{if $item.is_subscription_only}>
                                         <div class="modal-open">
                                             <a href="<{$item.cart_entry_subscription_url}>" class="subscription-btn btn">定期購入する</a>
-                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                            <div class="favorite_topre">
+                                                <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                            </div>
                                         </div>
                                     <{elseif $item.is_subscription}>
                                         <div class="modal-open">
                                             <div class="disabled-btn btn outstock off">売り切れ</div>
                                             <a href="<{$item.cart_entry_url}>" class="add-cart-btn btn instock off"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/addcart-icon.svg" alt="">カートに入れる</a>
-                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                            <div class="favorite_topre">
+                                                <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                            </div>
                                         </div>
                                         <div class="modal-open">
                                             <div class="disabled-btn btn outstock off">売り切れ</div>
                                             <a href="<{$item.cart_entry_subscription_url}>" class="subscription-btn btn instock off">定期購入する</a>
-                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                            <div class="favorite_topre">
+                                                <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                            </div>
                                         </div>
                                     <{else}>
                                         <div class="modal-open">
@@ -401,7 +440,10 @@
                                                 <div class="disabled-btn btn outstock off">売り切れ</div>
                                             <{/if}>
                                             <a href="<{$item.cart_entry_url}>" class="add-cart-btn btn cart-order-btn instock off" data-button-id="cart-order"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/addcart-icon.svg" alt="">カートに入れる</a>
-                                            <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                            <div class="favorite_topre">
+                                                <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                            </div>
                                         </div>
                                     <{/if}>
                                 </div>
@@ -411,23 +453,35 @@
                             <{if $item.is_subscription_only}>
                                 <div class="modal-open">
                                     <a href="<{$item.cart_entry_subscription_url}>" class="subscription-only subscription-btn btn">定期購入する</a>
-                                    <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                    <div class="favorite_topre">
+                                        <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                        <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                    </div>
                                 </div>
                             <{elseif $item.is_subscription}>
                                 <div class="subscription-wrap">
                                     <div class="modal-open">
                                         <a href="<{$item.cart_entry_url}>" class="add-cart-btn btn" data-button-id="cart-order"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/addcart-icon.svg" alt="">カートに入れる</a>
-                                    <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                        <div class="favorite_topre">
+                                            <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                            <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                        </div>
                                     </div>
                                     <div class="modal-open">
                                         <a href="<{$item.cart_entry_subscription_url}>" class="subscription-btn btn">定期購入する</a>
-                                    <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                        <div class="favorite_topre">
+                                            <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                            <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                        </div>
                                     </div>
                                 </div>
                             <{else}>
                                 <div class="modal-open">
                                     <a href="<{$item.cart_entry_url}>" class="add-cart-btn btn cart-order-btn" data-button-id="cart-order"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/addcart-icon.svg" alt="">カートに入れる</a>
-                                    <div class="favorite"><a href="<{$item.option_sku.list[i].favorite_entry_url}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a></div>
+                                        <div class="favorite_topre">
+                                            <a href="<{$item.favorite_entry_url}>" class="favorite-icon favorite-off <{if $item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                            <a href="<{$item.favorite_remove_url}>" class="favorite-icon favorite-on <{if !$item.is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                        </div>
                                 </div>
                             <{/if}>
                         <{/if}>
@@ -463,7 +517,7 @@
                 </div>
                 <div class="postage_copy">
                     <{if $page.id != "000000001627"}>
-                        <p>6,480円（税込）以上購入で送料無料！<br>※一部の地域と商品は除く</p>
+                        <p>税込6,480円以上購入で送料無料！<br>※一部の地域と商品は除く</p>
                     <{/if}>
                 </div>
                 <!--名入れ-->

@@ -11,32 +11,36 @@
         <div class="container">
             <main class="main">
                 <section class="main-section">
-                    <div class="category-title">
-                        <h2>検索結果
-                            <span>
-                                <{if $search.keyword}>
-                                    <{$search.keyword}>
-                                <{/if}>
-                                <{if $search.category.name}>
-                                    <{$search.category.name}>
-                                <{/if}>
-                                <{if $search.price_low || $search.price_high}>
-                                    <{if $search.price_low}><{$search.price_low}>円<{/if}>～<{if $search.price_high}><{$search.price_high}>円<{/if}>
-                                <{/if}>
-                                <{if $search.original_code}>
-                                    <{$search.original_code}>
-                                <{/if}>
-                            </span>
-                        </h2>
-                        <dl class="list-head-sort">
-                            <dt>並べ替え：</dt>
-                            <dd><a href="<{$search.sort_low_price_url}>">価格の低い順</a></dd>
-                            <dd><a href="<{$search.sort_high_price_url}>">価格の高い順</a></dd>
-                            <dd><a href="<{$search.sort_recommend_url}>">おすすめ順</a></dd>
-                            <dd><a href="<{$search.sort_new_url}>">新着順</a></dd>
-                        </dl>
+                    <div class="flex_topre">
+                        <div class="category-title">
+                            <h2>検索結果
+                                <span>
+                                    <{if $search.keyword}>
+                                        <{$search.keyword}>
+                                    <{/if}>
+                                    <{if $search.category.name}>
+                                        <{$search.category.name}>
+                                    <{/if}>
+                                    <{if $search.price_low || $search.price_high}>
+                                        <{if $search.price_low}><{$search.price_low}>円<{/if}>～<{if $search.price_high}><{$search.price_high}>円<{/if}>
+                                    <{/if}>
+                                    <{if $search.original_code}>
+                                        <{$search.original_code}>
+                                    <{/if}>
+                                </span>
+                            </h2>
+                            <div class="list-head-sort">
+                                <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/sort-icon.svg" alt="">
+                                <select id="sort-order" onchange="location = this.value;">
+                                    <option value="<{$category.sort_low_price_url}>">価格の低い順</option>
+                                    <option value="<{$category.sort_high_price_url}>">価格の高い順</option>
+                                    <option value="<{$category.sort_recommend_url}>">おすすめ順</option>
+                                    <option value="<{$category.sort_new_url}>">新着順</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p class="total-count">全<span><{$search.total_count}></span>件 <{$search.display_count}>件表示</p>
                     </div>
-                    <p class="total-count">全<span><{$search.total_count}></span>件 <{$search.display_count}>件表示</p>
                     <{if $search.child_search.has_item}>
                         <ul class="category-child-item">
                             <{section name=i loop=$category.child_category.list}>
@@ -79,7 +83,10 @@
                                                 <p class="price">税込<span><{$search.item.list[i].price|number_format}></span>円</p>
                                             <{/if}>
                                         </div>
-                                        <div class="favorite_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></div>
+                                        <div class="favorite_topre">
+                                            <a href="<{$search.item.list[i].favorite_entry_url}>" class="favorite-icon favorite-off <{if $search.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                            <a href="<{$search.item.list[i].favorite_remove_url}>" class="favorite-icon favorite-on <{if !$search.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                        </div>
                                     </div>
                                 </a>
                             </li>

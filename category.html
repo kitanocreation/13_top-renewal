@@ -585,83 +585,92 @@
                                 <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/kiwami.jpg" alt="">
                             <{/if}>
                         </div>
-                        <div class="category-title">
-                            <h2><{$category.name}></h2>
-                            <dl class="list-head-sort">
-                                <dt>並べ替え：</dt>
-                                <dd><a href="<{$category.sort_low_price_url}>">価格の低い順</a></dd>
-                                <dd><a href="<{$category.sort_high_price_url}>">価格の高い順</a></dd>
-                                <dd><a href="<{$category.sort_recommend_url}>">おすすめ順</a></dd>
-                                <dd><a href="<{$category.sort_new_url}>">新着順</a></dd>
-                            </dl>
-                        </div>
-                        <p class="total-count">全<span><{$category.total_count}></span>件 <{$category.display_count}>件表示</p>
-                        <{if $category.child_category.has_item}>
-                            <ul class="category-child-item">
-                                <{section name=i loop=$category.child_category.list}>
-                                    <li><a href="<{$category.child_category.list[i].url}>"><{$category.child_category.list[i].name}><span class="child-category-count">（<{$category.child_category.list[i].item_count}>）</span></a></li>
-                                <{/section}>
-                            </ul>
-                        <{/if}>
-                        <{if $category.item.has_item}>
-                        <ul class="item-list">
-                            <{section name=i loop=$category.item.list}>
-                                <li>
-                                    <a href="<{$category.item.list[i].url}>">
-                                        <div class="item-icon">
-                                            <{if $category.item.list[i].is_soldout}>
-                                                <p class="item-soldout">SOLD OUT</p>
-                                            <{/if}>
-                                        </div>
-                                        <div class="item-list-image"><img src="<{$category.item.list[i].image_L}>" alt=""></div>
-                                        <{if $category.item.list[i].icon.has_item}>
-                                            <ul class="item-list-icon">
-                                                <{section name=j loop=$category.item.list[i].icon.list}>
-                                                    <li><img src="<{$category.item.list[i].icon.list[j].image_url}>" alt=""></li>
+                        <div class="flex_topre">
+                            <div class="category-title">
+                                <{if $category.child_category.has_item}>
+                                    <div class="category-select">
+                                            <select id="subcategory-select" onchange="location = this.value;">
+                                                <option value="">カテゴリから絞り込む</option>
+                                                <{section name=i loop=$category.child_category.list}>
+                                                    <option value="<{$category.child_category.list[i].url}>">
+                                                        <{$category.child_category.list[i].name}>
+                                                    </option>
                                                 <{/section}>
-                                            </ul>
-                                        <{/if}>
-                                        <{if $category.item.list[i].has_review}>
-                                            <div class="item-list-review">
-                                                <{$category.item.list[i].review.star_html}>
-                                                <p class="item-list-review-count">(<{$category.item.list[i].review.total_count}>)</p>
-                                            </div>
-                                        <{/if}>
-                                        <p class="item-name"><{$category.item.list[i].name}></p>
-                                        <div class="con_topre">
-                                            <div class="text_topre">
-                                                <{if $category.item.list[i].is_sale}>
-                                                    <p class="price original-price">税込<span><{$category.item.list[i].original_price|number_format}></span>円</p>
-                                                    <p class="price item-sale-price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
-                                                    <p class="sale-discount-rate">[<{$category.item.list[i].sale_rate}>%OFF]</p>
-                                                <{else}>
-                                                    <p class="price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
+                                            </select>
+                                        <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/down-icon.svg" alt="">
+                                    </div>
+                                <{/if}>
+                                <div class="list-head-sort">
+                                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/sort-icon.svg" alt="">
+                                    <select id="sort-order" onchange="location = this.value;">
+                                        <option value="<{$category.sort_low_price_url}>">価格の低い順</option>
+                                        <option value="<{$category.sort_high_price_url}>">価格の高い順</option>
+                                        <option value="<{$category.sort_recommend_url}>">おすすめ順</option>
+                                        <option value="<{$category.sort_new_url}>">新着順</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p class="total-count">全<span><{$category.total_count}></span>件 <{$category.display_count}>件表示</p>
+                        </div>
+                        <{if $category.item.has_item}>
+                            <ul class="item-list">
+                                <{section name=i loop=$category.item.list}>
+                                    <li>
+                                        <a href="<{$category.item.list[i].url}>">
+                                            <div class="item-icon">
+                                                <{if $category.item.list[i].is_soldout}>
+                                                    <p class="item-soldout">SOLD OUT</p>
                                                 <{/if}>
                                             </div>
-                                            <div class="favorite_topre">
-                                                <a href="<{$category.item.list[i].favorite_entry_url}>" class="favorite-icon favorite-off <{if $category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
-                                                <a href="<{$category.item.list[i].favorite_remove_url}>" class="favorite-icon favorite-on <{if !$category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                            <div class="item-list-image"><img src="<{$category.item.list[i].image_L}>" alt=""></div>
+                                            <{if $category.item.list[i].icon.has_item}>
+                                                <ul class="item-list-icon">
+                                                    <{section name=j loop=$category.item.list[i].icon.list}>
+                                                        <li><img src="<{$category.item.list[i].icon.list[j].image_url}>" alt=""></li>
+                                                    <{/section}>
+                                                </ul>
+                                            <{/if}>
+                                            <{if $category.item.list[i].has_review}>
+                                                <div class="item-list-review">
+                                                    <{$category.item.list[i].review.star_html}>
+                                                    <p class="item-list-review-count">(<{$category.item.list[i].review.total_count}>)</p>
+                                                </div>
+                                            <{/if}>
+                                            <p class="item-name"><{$category.item.list[i].name}></p>
+                                            <div class="con_topre">
+                                                <div class="text_topre">
+                                                    <{if $category.item.list[i].is_sale}>
+                                                        <p class="price original-price">税込<span><{$category.item.list[i].original_price|number_format}></span>円</p>
+                                                        <p class="price item-sale-price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
+                                                        <p class="sale-discount-rate">[<{$category.item.list[i].sale_rate}>%OFF]</p>
+                                                    <{else}>
+                                                        <p class="price">税込<span><{$category.item.list[i].price|number_format}></span>円</p>
+                                                    <{/if}>
+                                                </div>
+                                                <div class="favorite_topre">
+                                                    <a href="<{$category.item.list[i].favorite_entry_url}>" class="favorite-icon favorite-off <{if $category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                                    <a href="<{$category.item.list[i].favorite_remove_url}>" class="favorite-icon favorite-on <{if !$category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            <{/section}>
-                        </ul>
-                        <div class="pager-wrap">
-                            <{if $category.pager.has_item}>
-                                <ul class="pager">
-                                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/prev-icon-re_topre.svg" alt="" class="prev_topre off_topre">
-                                    <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/next-icon.svg" alt="" class="next_topre">
-                                    <{section name=i loop=$category.pager.list}>
-                                        <{if $category.pager.list[i].is_current_page}>
-                                            <li><span class="current"><{$category.pager.list[i].number}></span></li>
-                                        <{else}>
-                                            <li><a href="<{$category.pager.list[i].url}>"><span><{$category.pager.list[i].number}></span></a></li>
-                                        <{/if}>
-                                    <{/section}>
-                                </ul>
-                            <{/if}>
-                        </div>
+                                        </a>
+                                    </li>
+                                <{/section}>
+                            </ul>
+                            <div class="pager-wrap">
+                                <{if $category.pager.has_item}>
+                                    <ul class="pager">
+                                        <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/prev-icon-re_topre.svg" alt="" class="prev_topre off_topre">
+                                        <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/next-icon.svg" alt="" class="next_topre">
+                                        <{section name=i loop=$category.pager.list}>
+                                            <{if $category.pager.list[i].is_current_page}>
+                                                <li><span class="current"><{$category.pager.list[i].number}></span></li>
+                                            <{else}>
+                                                <li><a href="<{$category.pager.list[i].url}>"><span><{$category.pager.list[i].number}></span></a></li>
+                                            <{/if}>
+                                        <{/section}>
+                                    </ul>
+                                <{/if}>
+                            </div>
                         <{else}>
                             <p class="empty">このカテゴリーには商品がありません</p>
                         <{/if}>

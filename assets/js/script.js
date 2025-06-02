@@ -192,6 +192,20 @@ $(function() {
         }
     });
 
+    /* favorite_topre */
+    $('button.remodal-close, button.remodal-confirm').on('click', function() {
+        $('.remodal-wrapper.makeshop-modal.remodal-is-opened').css('display', 'none');
+    });
+    $('a.favorite-off').on('click', function(){
+        $(this).css('border', 'solid 1px #B8243F');
+        $(this).find('img').attr('src', 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg');
+    });
+    $('a.favorite-on').on('click', function(){
+        $(this).css('border', 'solid 1px #414143');
+        $(this).find('img').attr('src', 'https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg');
+    });
+
+
     /* list-head-sort_topre */
     const urlParams = new URLSearchParams(window.location.search);
     const sortParam = urlParams.get('sort');
