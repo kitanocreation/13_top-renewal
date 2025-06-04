@@ -150,7 +150,7 @@ $(function() {
     });
 
     /*  */
-    $('main.top_topre button').on('click', function() {
+    $('main.top_topre button.more_topre').on('click', function() {
         const $targetButton = $(this).parents('section').find('button');
         const $targetUl = $(this).parents('section').find('ul');
         const openHtml = '<span>&minus;</span>閉じる';
@@ -161,7 +161,7 @@ $(function() {
             $targetButton.html(closeHtml);
         } else {
             $('main.top_topre ul.open_topre').removeClass('open_topre');
-            $('main.top_topre button.open_topre').each(function() {
+            $('main.top_topre button.more_topre.open_topre').each(function() {
                 if($(this)[0] !== $targetButton[0]) {
                     $(this).removeClass('open_topre');
                     $(this).html(closeHtml);

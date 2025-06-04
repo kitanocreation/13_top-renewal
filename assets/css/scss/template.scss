@@ -57,6 +57,7 @@ header.top_topre, header.down_topre {
 
                         a {
                             display: block;
+                            position: relative;
 
                             img {
                                 display: block;
@@ -71,6 +72,20 @@ header.top_topre, header.down_topre {
                                 letter-spacing: -.05em;
                                 line-height: 100%;
                                 text-align: center;
+                            }
+
+                            span.count_topre {
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                background-color: $red;
+                                @include center;
+                                font-size: 12px;
+                                color: $white;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                transform: translate(25%, -50%);
                             }
                         }
                     }

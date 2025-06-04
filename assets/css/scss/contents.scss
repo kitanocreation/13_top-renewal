@@ -207,6 +207,13 @@
                         width: calc((100% - 16px) / 2);
                         margin: 40px 0 0 16px;
 
+                        .item-icon {
+
+                            p.item-soldout {
+                                color: $white;
+                            }
+                        }
+
                         .item-list-review {
                             margin-top: 8px;
                         }
@@ -334,14 +341,32 @@
 
     h1.item-name_topre {
         font-size: 20px;
+        font-weight: 700;
     }
 
     span.price1_topre {
         font-size: 14px !important;
+        font-weight: 500 !important;
     }
 
     span.price2_topre {
         font-size: 24px !important;
+        font-weight: 700 !important;
+    }
+
+    .postage_copy {
+
+        p {
+            font-weight: 500 !important;
+        }
+    }
+
+    h3.item-new {
+        font-weight: 700 !important;
+    }
+
+    p.item-new {
+        font-weight: 500 !important;
     }
 
     .favorite_topre {
@@ -375,6 +400,25 @@
             border: solid 1px #B8243F;
         }
     }
+
+    .item-review {
+
+        .review_topre {
+            display: flex;
+
+            a {
+                width: fit-content;
+            }
+        }
+    }
+
+    .reviewRateStar.starOn::before {
+        color: $yellow;
+    }
+
+    .item-quantity {
+        margin-top: 15px;
+    }
 }
 
 section.group-review-section {
@@ -382,22 +426,95 @@ section.group-review-section {
     .item-review-detail {
 
         h2 {
+            font-family: $font3;
             font-size: 20px;
         }
     }
+
+    .reviewRateStar::before {
+        color: $yellow;
+    }
 }
 
-section.group-item-section {
+.group-item-section {
 
     h2.group-item-title {
-        font-size: 28px;
+        font-family: $font3 !important;
+        font-size: 24px !important;
+    }
+
+    p.item-name {
+        margin-top: 4px;
+        font-weight: 700;
+    }
+
+    .review_topre {
+        margin-top: 4px;
+        display: flex;
+
+        a {
+            width: fit-content;
+        }
+    }
+
+    .reviewRateStar::before {
+        color: $yellow;
+    }
+
+    .price {
+        font-size: 12px;
+
+        span {
+            font-size: 16px;
+        }
     }
 }
 
 .checked-contents {
 
     h2 {
-        font-size: 28px;
+        font-family: $font3 !important;
+        font-size: 24px;
+    }
+
+    p.price.item-sale-price, p.price.item-sale-price span {
+        color: $red;
+    }
+
+    .reviewRateStar::before {
+        color: $yellow;
+    }
+
+    .review_topre {
+        display: flex;
+
+        a {
+            width: fit-content;
+        }
+    }
+
+    p.item-name {
+        margin-top: 4px;
+
+        a {
+            font-weight: 700;
+        }
+    }
+
+    p.price_topre {
+        margin-top: 4px;
+    }
+
+    p.price {
+        font-size: 12px;
+
+        span {
+            font-size: 16px;
+        }
+    }
+
+    p.sale-discount-rate {
+        color: $red;
     }
 }
 
@@ -483,6 +600,17 @@ ul.checked-item-list {
 
                         li {
                             width: calc((100% - 48px) / 4);
+
+                            ul.item-list-icon {
+
+                                li {
+                                    width: 100px;
+
+                                    img {
+                                        width: 100px;
+                                    }
+                                }
+                            }
 
                             p.item-name {
                                 font-size: 16px;

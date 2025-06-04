@@ -20,16 +20,16 @@
                 <{/section}>
             </div>
             <{/if}>
-            <{if $item.group.list[i].base_category.url}>
-                <p class="item-category"><a href="<{$item.group.list[i].base_category.url}>"><{$item.group.list[i].base_category.name}></a></p>
+            <{if $item.group.list[i].has_review}>
+                <div class="review_topre"><{$item.group.list[i].review.star_html}><a href="<{$item.group.list[i].review.url}>">（<{$item.group.list[i].review.total_count}>）</a></div>
             <{/if}>
-                <p class="item-name"><a href="<{$item.group.list[i].url}>"><{$item.group.list[i].name}></a></p>
+            <p class="item-name"><a href="<{$item.group.list[i].url}>"><{$item.group.list[i].name}></a></p>
             <{if $item.group.list[i].is_sale}>
-                <p class="price original-price">税込<{$item.group.list[i].original_price|number_format}>円</p>
-                <p class="price item-sale-price">税込<{$item.group.list[i].price|number_format}><span class="tax">円</span>
-                <span class="sale-discount-rate">[<{$item.group.list[i].sale_rate}>%OFF</span>]</p>
+                <p class="price original-price">税込<span><{$item.group.list[i].original_price|number_format}>円</span></p>
+                <p class="price item-sale-price">税込<span><{$item.group.list[i].price|number_format}>円</span>
+                <span class="sale-discount-rate">[<{$item.group.list[i].sale_rate}>%OFF]</span></p>
             <{else}>
-                <p class="price">税込<{$item.group.list[i].price|number_format}>円</p>
+                <p class="price">税込<span><{$item.group.list[i].price|number_format}></span>円</p>
             <{/if}>
         </li>
         <{/section}>

@@ -7,13 +7,14 @@
         body {
 
             .fv_topre {
-                width: 100%;
+                width: calc(100vw - 160px);
+                margin: 28px auto 0 auto;
 
                 .mv_topre {
-                    height: 50vw;
+                    height: initial;
 
                     button.slick-prev, button.slick-next {
-                        top: 50vw !important;
+                        top: 45vw !important;
                     }
 
                     button.slick-prev {
@@ -30,6 +31,10 @@
                         &::before {
                             background-image: url('https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/responsive/template/mv/next-icon.svg');
                         }
+                    }
+
+                    ul.slick-dots {
+                        bottom: -30px;
                     }
                 }
 

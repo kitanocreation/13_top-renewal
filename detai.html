@@ -194,7 +194,7 @@
                 <{if $item.review.is_enabled}>
                 <div class="item-review">
                     <{if $item.review.has_item}>
-                        <div class="review-link"><a href="<{$item.review.list_url}>">（<{$item.review.total_count}>件）のレビュー</a></div>
+                        <div class="review_topre"><{$item.review.star_html}><a href="<{$item.group.list[i].review.url}>">（<{$item.review.total_count}>）</a></div>
                     <{else}>
                         <p class="review-empty">レビューはまだありません</p>
                     <{/if}>

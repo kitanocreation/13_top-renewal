@@ -128,9 +128,9 @@
                         <h3><a href="<{$ranking_item.list[i].url}>"><{$ranking_item.list[i].name}></a></h3>
                         <{if $ranking_item.list[i].is_sale}>
                             <p class="price_topre">税込<span><{$ranking_item.list[i].original_price|number_format}></span>円</p>
-                            <p class="price_topre">
-                                税込<{$ranking_item.list[i].price|number_format}>円
-                                <span><{$ranking_item.list[i].sale_rate}>%OFF</span>
+                            <p class="price_topre sale_topre">
+                                税込<span class="price1_topre"><{$recently_item.list[i].price|number_format}></span>円
+                                <span><{$recently_item.list[i].sale_rate}>%OFF</span>
                             </p>
                         <{else}>
                             <p class="price_topre">税込<span><{$ranking_item.list[i].price|number_format}></span>円</p>
@@ -166,9 +166,9 @@
                         <h3><a href="<{$new_item.list[i].url}>"><{$new_item.list[i].name}></a></h3>
                         <{if $new_item.list[i].is_sale}>
                             <p class="price_topre">税込<span><{$new_item.list[i].original_price|number_format}></span>円</p>
-                            <p class="price_topre">
-                                税込<{$new_item.list[i].price|number_format}>円
-                                <span><{$new_item.list[i].sale_rate}>%OFF</span>
+                            <p class="price_topre sale_topre">
+                                税込<span class="price1_topre"><{$recently_item.list[i].price|number_format}></span>円
+                                <span><{$recently_item.list[i].sale_rate}>%OFF</span>
                             </p>
                         <{else}>
                             <p class="price_topre">税込<span><{$new_item.list[i].price|number_format}></span>円</p>
@@ -176,7 +176,7 @@
                     </li>
                 <{/section}>
             </ul>
-            <button><span>&plus;</span>もっと見る</button>
+            <button class="more_topre"><span>&plus;</span>もっと見る</button>
         </section>
         <section class="recommend_topre">
             <h2>今月のおすすめ</h2>
@@ -205,9 +205,9 @@
                         <h3><a href="<{$special_item.list[i].url}>"><{$special_item.list[i].name}></a></h3>
                         <{if $special_item.list[i].is_sale}>
                             <p class="price_topre">税込<span><{$special_item.list[i].original_price|number_format}></span>円</p>
-                            <p class="price_topre">
-                                税込<{$special_item.list[i].price|number_format}>円
-                                <span><{$special_item.list[i].sale_rate}>%OFF</span>
+                            <p class="price_topre sale_topre">
+                                税込<span class="price1_topre"><{$recently_item.list[i].price|number_format}></span>円
+                                <span><{$recently_item.list[i].sale_rate}>%OFF</span>
                             </p>
                         <{else}>
                             <p class="price_topre">税込<span><{$special_item.list[i].price|number_format}></span>円</p>
@@ -215,7 +215,7 @@
                     </li>
                 <{/section}>
             </ul>
-            <button><span>&plus;</span>もっと見る</button>
+            <button class="more_topre"><span>&plus;</span>もっと見る</button>
         </section>
         <section class="review_topre">
             <h2>新着レビュー</h2>
@@ -238,7 +238,7 @@
                     </li>
                 <{/section}>
             </ul>
-            <button><span>&plus;</span>もっと見る</button>
+            <button class="more_topre"><span>&plus;</span>もっと見る</button>
         </section>
         <section class="check_topre">
             <h2>最近チェックした商品</h2>
@@ -267,8 +267,8 @@
                         <h3><a href="<{$recently_item.list[i].url}>"><{$recently_item.list[i].name}></a></h3>
                         <{if $recently_item.list[i].is_sale}>
                             <p class="price_topre">税込<span><{$recently_item.list[i].original_price|number_format}></span>円</p>
-                            <p class="price_topre">
-                                税込<{$recently_item.list[i].price|number_format}>円
+                            <p class="price_topre sale_topre">
+                                税込<span class="price1_topre"><{$recently_item.list[i].price|number_format}></span>円
                                 <span><{$recently_item.list[i].sale_rate}>%OFF</span>
                             </p>
                         <{else}>
@@ -277,7 +277,7 @@
                     </li>
                 <{/section}>
             </ul>
-            <button><span>&plus;</span>もっと見る</button>
+            <button class="more_topre"><span>&plus;</span>もっと見る</button>
         </section>
         <section class="search_topre">
             <nav class="search-nav_topre">

@@ -299,7 +299,7 @@
                 <ul>
                     <li><a href="<{$url.mypage}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/account-icon.svg" alt=""><span>マイページ</span></a></li>
                     <li><a href="<{$url.favorite}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/favorite-icon.svg" alt=""><span>お気に入り</span></a></li>
-                    <li><a href="<{$url.cart}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/cart-icon.svg" alt=""><span>カート</span></a></li>
+                    <li><a href="<{$url.cart}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/cart-icon.svg" alt=""><span>カート</span><span class="count_topre" <{if !$cart.has_item}>style="display:none;"<{/if}>><{$cart.total_quantity}></span></a></li>
                     <li class="drawerbutton_topre sp_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/dmenu-icon.svg" alt=""><span>メニュー</span></li>
                 </ul>
             </nav>
@@ -610,7 +610,7 @@
                 <ul>
                     <li><a href="<{$url.mypage}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/account-icon.svg" alt=""><span>マイページ</span></a></li>
                     <li><a href="<{$url.favorite}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/favorite-icon.svg" alt=""><span>お気に入り</span></a></li>
-                    <li><a href="<{$url.cart}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/cart-icon.svg" alt=""><span>カート</span></a></li>
+                    <li><a href="<{$url.cart}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/cart-icon.svg" alt=""><span>カート</span><span class="count_topre" <{if !$cart.has_item}>style="display:none;"<{/if}>><{$cart.total_quantity}></span></a></li>
                     <li class="drawerbutton_topre sp_topre"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/template/header/dmenu-icon.svg" alt=""><span>メニュー</span></li>
                 </ul>
             </nav>
