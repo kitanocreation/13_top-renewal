@@ -516,6 +516,17 @@ section.group-review-section {
     p.sale-discount-rate {
         color: $red;
     }
+
+    .item-icon {
+        top: 0;
+        right: initial;
+
+        p {
+            @include font-s;
+            color: $white;
+            line-height: 145%;
+        }
+    }
 }
 
 ul.checked-item-list {
@@ -670,10 +681,22 @@ ul.checked-item-list {
         }
     }
 
-    section.group-item-section {
+    .group-item-section {
 
         h2.group-item-title {
-            font-size: 32px;
+            font-size: 32px !important;
+            font-weight: 600 !important;
+        }
+
+        ul.group-item-list {
+
+            li {
+                width: 125px;
+
+                .reviewRateStar::before {
+                    color: $yellow;
+                }
+            }
         }
     }
 
@@ -681,6 +704,14 @@ ul.checked-item-list {
 
         h2 {
             font-size: 32px;
+            font-weight: 600;
+        }
+
+        .item-icon {
+
+            p {
+                font-size: 14px;
+            }
         }
     }
 }

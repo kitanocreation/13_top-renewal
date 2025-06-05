@@ -85,6 +85,10 @@
                     h2 {
                         @include h2-pc;
                     }
+
+                    p.status_topre {
+                        font-size: 14px;
+                    }
                 }
 
                 section.lp_topre {

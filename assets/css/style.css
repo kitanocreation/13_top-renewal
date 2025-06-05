@@ -579,6 +579,16 @@ html body main.top_topre section.lp_topre h2, html body main.top_topre section.c
 html body main.top_topre section.lp_topre ul.open_topre li:nth-of-type(n+4), html body main.top_topre section.category_topre ul.open_topre li:nth-of-type(n+4), html body main.top_topre section.ranking_topre ul.open_topre li:nth-of-type(n+4), html body main.top_topre section.new_topre ul.open_topre li:nth-of-type(n+4), html body main.top_topre section.recommend_topre ul.open_topre li:nth-of-type(n+4), html body main.top_topre section.review_topre ul.open_topre li:nth-of-type(n+4), html body main.top_topre section.check_topre ul.open_topre li:nth-of-type(n+4) {
   display: block;
 }
+html body main.top_topre section.lp_topre p.status_topre, html body main.top_topre section.category_topre p.status_topre, html body main.top_topre section.ranking_topre p.status_topre, html body main.top_topre section.new_topre p.status_topre, html body main.top_topre section.recommend_topre p.status_topre, html body main.top_topre section.review_topre p.status_topre, html body main.top_topre section.check_topre p.status_topre {
+  width: fit-content;
+  background-color: #707070;
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 145%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 html body main.top_topre section.lp_topre {
   background-color: #F1F1F4;
   padding-bottom: 40px;
@@ -1530,6 +1540,15 @@ section.group-review-section .reviewRateStar::before {
 .checked-contents p.sale-discount-rate {
   color: #B11232;
 }
+.checked-contents .item-icon {
+  top: 0;
+  right: initial;
+}
+.checked-contents .item-icon p {
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 145%;
+}
 
 ul.checked-item-list li ul.item-list-icon li {
   width: auto;
@@ -1618,11 +1637,22 @@ ul.checked-item-list li ul.item-list-icon li {
   section.group-review-section .item-review-detail h2 {
     font-size: 24px;
   }
-  section.group-item-section h2.group-item-title {
-    font-size: 32px;
+  .group-item-section h2.group-item-title {
+    font-size: 32px !important;
+    font-weight: 600 !important;
+  }
+  .group-item-section ul.group-item-list li {
+    width: 125px;
+  }
+  .group-item-section ul.group-item-list li .reviewRateStar::before {
+    color: #FFD327;
   }
   .checked-contents h2 {
     font-size: 32px;
+    font-weight: 600;
+  }
+  .checked-contents .item-icon p {
+    font-size: 14px;
   }
 }
 section.ks-items dl.list-head-sort {
@@ -2279,6 +2309,9 @@ button {
   html body main.top_topre section.lp_topre h2, html body main.top_topre section.category_topre h2, html body main.top_topre section.ranking_topre h2, html body main.top_topre section.new_topre h2, html body main.top_topre section.recommend_topre h2, html body main.top_topre section.review_topre h2, html body main.top_topre section.check_topre h2 {
     margin-left: 80px;
     font-size: 32px;
+  }
+  html body main.top_topre section.lp_topre p.status_topre, html body main.top_topre section.category_topre p.status_topre, html body main.top_topre section.ranking_topre p.status_topre, html body main.top_topre section.new_topre p.status_topre, html body main.top_topre section.recommend_topre p.status_topre, html body main.top_topre section.review_topre p.status_topre, html body main.top_topre section.check_topre p.status_topre {
+    font-size: 14px;
   }
   html body main.top_topre section.lp_topre {
     padding-bottom: 64px;

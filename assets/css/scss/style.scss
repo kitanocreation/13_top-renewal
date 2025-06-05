@@ -148,6 +148,15 @@ html {
                         display: block;
                     }
                 }
+
+                p.status_topre {
+                    width: fit-content;
+                    background-color: #707070;
+                    @include font-s;
+                    color: $white;
+                    line-height: 145%;
+                    @include absolute;
+                }
             }
 
             section.lp_topre {

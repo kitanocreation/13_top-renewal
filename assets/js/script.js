@@ -67,6 +67,11 @@ $(function() {
             $(this).parents('nav.small-select_topre').removeClass('small-select_topre');
         });
     });
+    $('nav.gnav_topre button').on('click', function() {
+        $('.gnav-select_topre').removeClass('gnav-select_topre');
+        $('.medium-select_topre').removeClass('medium-select_topre');
+        $('.gnav-select_topre').removeClass('gnav-select_topre');
+    });
 
     /* drawer_topre */
     $('li.drawerbutton_topre').on('click', function() {
