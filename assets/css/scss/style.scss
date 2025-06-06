@@ -151,11 +151,14 @@ html {
 
                 p.status_topre {
                     width: fit-content;
-                    background-color: #707070;
+                    background-color: #707070 !important;
                     @include font-s;
                     color: $white;
                     line-height: 145%;
-                    @include absolute;
+                    position: absolute;
+                    top: 0;
+                    right: 0 !important;
+                    left: initial !important;
                 }
             }
 

@@ -581,13 +581,14 @@ html body main.top_topre section.lp_topre ul.open_topre li:nth-of-type(n+4), htm
 }
 html body main.top_topre section.lp_topre p.status_topre, html body main.top_topre section.category_topre p.status_topre, html body main.top_topre section.ranking_topre p.status_topre, html body main.top_topre section.new_topre p.status_topre, html body main.top_topre section.recommend_topre p.status_topre, html body main.top_topre section.review_topre p.status_topre, html body main.top_topre section.check_topre p.status_topre {
   width: fit-content;
-  background-color: #707070;
+  background-color: #707070 !important;
   font-size: 12px;
   color: #FFFFFF;
   line-height: 145%;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0 !important;
+  left: initial !important;
 }
 html body main.top_topre section.lp_topre {
   background-color: #F1F1F4;
