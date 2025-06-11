@@ -236,6 +236,30 @@ $(function() {
             }
         }
     });
+    const urlParams2 = new URLSearchParams(window.location.search);
+    const sortParam2 = urlParams2.get('sort');
+    $('section.ks-items .list-head-sort #sort-order option').each(function() {
+        const $link = $(this);
+        const linkText = $link.text();
+        $link.parents('#sort-order').removeClass('select_topre');
+        if(sortParam2 === 'price') {
+            if(linkText === '価格の低い順') {
+                $link.parents('#sort-order').addClass('select_topre');
+            }
+        } else if(sortParam2 === 'price_high') {
+            if(linkText === '価格の高い順') {
+                $link.parents('#sort-order').addClass('select_topre');
+            }
+        } else if(sortParam2 === 'order') {
+            if(linkText === '新着順') {
+                $link.parents('#sort-order').addClass('select_topre');
+            }
+        } else {
+            if(linkText === 'おすすめ順') {
+                $link.parents('#sort-order').addClass('select_topre');
+            }
+        }
+    });
 
     /* pager */
     function updatePagerArrows() {

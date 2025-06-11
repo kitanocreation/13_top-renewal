@@ -4,8 +4,7 @@
         <link rel="stylesheet" href="https://gigaplus.makeshop.jp/kitanoace/09_ks/assets/css/style31.css">
         <script>(function(d){var config={kitId:'wku2cgo',scriptTimeout:3000,async:true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);(function(d){var config={kitId:'zqp2ktf',scriptTimeout:3000,async:true},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
         <style>@media screen and (max-width:768px){html body .ks_main .ks-ranking, html body .ks_main .ks-recommend{padding-bottom:0;}}@media screen and (min-width:768px){section.ks-items ul.item-list{justify-content:initial;}section.ks-items p.total-count{margin:40px 0 0 80px;}html body .ks-fv .ks-fv_img{top:112px !important;}html body .ks-fv .ks-fv-con{margin-top:calc((100vw - 160px) * 0.36 + 0px) !important;}}html body .ks-fv .ks-fv_img{top:136px;}.header{z-index:4;}.header .postage p,#g-nav,.footer a,.footer p{font-size:13px;letter-spacing:0;}.nav-contact li{font-size:14px;}.nav-contact li,.gnav li a,.bnav li a,.bnav li p,.footer-nav li a,.footer-text span,.copyright{letter-spacing:0;}.footer-nav li{line-height:1.4;}.footer-nav li a{font-size:14px;}.sp-side-section,.search{width:77.5%;}.clearfix{position:relative;z-index:0;}@media screen and (min-width:768px){.curryBs-fv{padding-top:146.5px;}.curryBs_main a:hover{opacity:1;}header .bottom-nav{height:55px;}.bottom-nav{font-size:14px;letter-spacing:0;}}.ks-slideX-sp h3{white-space:break-spaces;}</style>
-        <script src="https://gigaplus.makeshop.jp/kitanoace/09_ks/assets/js/script7.js" defer></script> 
-        <script src="<{$page.javascript}>" defer></script>   
+        <script src="https://gigaplus.makeshop.jp/kitanoace/09_ks/assets/js/script9.js" defer></script> 
         <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.js" defer></script> -->
     <{$makeshop.body_top}>
 
@@ -210,14 +209,18 @@
             <section class="ks-items">
                 <div class="category-title">
                     <h2>商品一覧</h2>
-                    <p class="total-count">全<span><{$category.total_count}></span>件 <{$category.display_count}>件表示</p>
-                    <dl class="list-head-sort">
-                        <dt>並べ替え：</dt>
-                        <dd><a href="<{$category.sort_low_price_url}>">価格の低い順</a></dd>
-                        <dd><a href="<{$category.sort_high_price_url}>">価格の高い順</a></dd>
-                        <dd><a href="<{$category.sort_recommend_url}>">おすすめ順</a></dd>
-                        <dd><a href="<{$category.sort_new_url}>">新着順</a></dd>
-                    </dl>
+                    <nav class="flex_topre">
+                        <div class="list-head-sort">
+                            <img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/sort-icon.svg" alt="">
+                            <select id="sort-order" onchange="location = this.value;">
+                                <option value="<{$category.sort_recommend_url}>">おすすめ順</option>
+                                <option value="<{$category.sort_new_url}>">新着順</option>
+                                <option value="<{$category.sort_low_price_url}>">価格の低い順</option>
+                                <option value="<{$category.sort_high_price_url}>">価格の高い順</option>
+                            </select>
+                        </div>
+                        <p class="total-count">全<span><{$category.total_count}></span>件 <{$category.display_count}>件表示</p>
+                    </nav>
                 </div>
                 <{if $category.item.has_item}>
                     <ul class="item-list">
@@ -256,7 +259,7 @@
                                         </div>
                                         <div class="favorite_topre">
                                             <a href="<{$category.item.list[i].favorite_entry_url}>" class="favorite-icon favorite-off <{if $category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
-                                            <a href="<{$category.item.list[i].favorite_remove_url}>" class="favorite-icon favorite-on <{if !$category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-icon.svg" alt=""></a>
+                                            <a href="<{$category.item.list[i].favorite_remove_url}>" class="favorite-icon favorite-on <{if !$category.item.list[i].is_favorite}>hide<{/if}>"><img src="https://gigaplus.makeshop.jp/kitanoace/19_top-renewal/assets/img/contents/favorite-on-icon.svg" alt=""></a>
                                         </div>
                                     </div>
                                 </a>
